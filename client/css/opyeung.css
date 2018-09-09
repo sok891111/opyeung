@@ -1,0 +1,24 @@
+.container{
+    padding-right: 0px !important; 
+    padding-left: 0px !important;
+    margin-top : 15px;
+}
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+ 
+
+.card-list{
+  z-index: 999 !important;
+}
+
+#main_card{
+  background-color: white;
+  height:100%;
+}
+.background{
+  position: absolute;
+  top: 15px;
+  z-index: 2;
+}

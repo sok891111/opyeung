@@ -1,0 +1,848 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <title>지원서조회 | My Application | My Page | SK TALENT PORTAL</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/PORTAL/KOREAN/css/normalize.css" />
+    <link rel="stylesheet" href="/PORTAL/KOREAN/css/common.css" />
+    <script type="text/javascript" src="/Resources/Scripts/JComboLoad.js"></script>
+    <script type="text/javascript" src="/PORTAL/KOREAN/images/js/common.js"></script>
+    <script type="text/javascript">
+        if (location.href.substring(0, 7) == "http://") {
+            location.href = "https://" + location.href.substring(7);
+        }  
+    </script>
+    </head>
+
+    <body>
+        <form name="form1" method="post" action="TRM2230.aspx?REQ_CD=R1703A170001" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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kOuwnOyggeycvOuhnCDstZzqs6Ag7IiY7KSA7J2YIOuqqe2RnOulvCDshLjsmrDqs6Ag64GI7KeI6riw6rKMIOyEsey3qO2VnCDqsr3tl5jsl5Ag64yA7ZW0IOyEnOyIoO2VtCDso7zsi63si5zsmKQuPC9iPjxicj4mbmJzcDsgJm5ic3A7MSkg66i87KCALCDqtIDroKgg64yA7ZGcIOqyve2XmCAy6rCA7KeA66W8IOqwhOuete2VmOqyjCDsnpHshLHtlbQg7KO87Iut7Iuc7JikLiAo6rCBIDUw7J6QIOydtOuCtCk8YnI+Jm5ic3A7ICZuYnNwOy0g7Ja47KCcLCDslrTrlJTshJwsIOyWtOuWpCDsnbzsnYQg7IiY7ZaJ7ZaI642YIOqyve2XmOyduOyngCDqsITrnrXtlZjqsowg6riw7Iig7ZWgIOqygzwvdGg+CiAgICAgICA8L3RyPgoNCiAgICAgICA8dHI+Cg0KICAgICAgIDx0ZD4mbmJzcDsgJm5ic3A7ICZuYnNwOyA8Zm9udCBzaXplPTM+4pGgPC9mb250PiZuYnNwOzIwMTbrhYQg6rCA7J2ELCAx7J24IOqwnOuwnOyekOuhnCDsmKTtj4nsnbTrnbzripQg7ISc67mE7Iqk66W8IOykgOu5hO2WiOuNmCDqsr3tl5g8L3RleHRhcmVhPjwvdGQ+Cg0KICAgPC90cj4KDQogICAgICAgICAgIDwvdGJvZHk+Cg0KICAgICAgIDwvdGFibGU+Cg0KICAgICAgIDx0YWJsZSAgc3R5bGU9J2JvcmRlcjowOyBwYWRkaW5nOjAgMCAwIDA7Jz4KDQogICAgICAgPGNhcHRpb24+IOyekOq4sOyGjOqwnOyEnDIg7YWM7J2067iU7J6F64uI64ukLiDroZwg6rWs7ISxPC9jYXB0aW9uPgoNCiAgICAgICAgICAgPHRib2R5PgoNCiAgICAgICAgICAgPHRyPgoNCiAgICAgICA8L3RyPgoNCiAgICAgICA8dHI+Cg0KICAgICAgIDx0ZD4mbmJzcDsgJm5ic3A7ICZuYnNwOyA8Zm9udCBzaXplPTM+4pGhPC9mb250PiZuYnNwOzIwMTTrhYQsIFNJ7ZqM7IKs66W8IOuLpOuLiOupsCDssqsg7ZSE66Gc7KCd7Yq466W8IOynhO2Wie2VmOyYgOuNmCDqsr3tl5g8L3RleHRhcmVhPjwvdGQ+Cg0KICAgPC90cj4KDQogICAgICAgICAgIDwvdGJvZHk+Cg0KICAgICAgIDwvdGFibGU+Cg0KICAgICAgIDx0YWJsZSAgc3R5bGU9J2JvcmRlcjowOyBwYWRkaW5nOjAgMCAwIDA7Jz4KDQogICAgICAgPGNhcHRpb24+IOyekOq4sOyGjOqwnOyEnDMg7YWM7J2067iU7J6F64uI64ukLiAgIDIpIOychOyXkCDsnpHshLHtlZwgMuqwgOyngCDqsr3tl5gg7KSRIDHqsJzrpbwg6rOo6528IOyigCDrjZQg7IOB7IS47ZWY6rKMIOyekeyEse2VtCDso7zsi63si5zsmKQuPGJyPiAgICAtIOuzuOyduOydtCDshKTsoJXtlZwg66qp7ZGcLyDrqqntkZzsnZgg7IiY66a9IOqzvOyglS8g7LKY7J2M7JeQIOyDneqwge2WiOuNmCDrqqntkZwg64us7ISxIOqwgOuKpeyEsS8g7IiY7ZaJIOqzvOygleyXkOyEnCDrtoDrlKrtnowg7J6l7JWg66y8IOuwjyDqt7gg65WM7J2YIOqwkOyglSjsg53qsIEpLyDrqqntkZwg64us7ISx7J2EIOychO2VnCDqtazssrTsoIEg64W466ClLyDsi6TsoJwg6rKw6rO8LyDqsr3tl5jsnZgg7KeE7Iuk7ISx7J2EIOymneuqhe2VoCDsiJgg7J6I64qUIOq3vOqxsOqwgCDsnpgg65Oc65+s64KY64+E66GdIOq4sOyIoCDroZwg6rWs7ISxPC9jYXB0aW9uPgoNCiAgICAgICAgICAgPHRib2R5PgoNCiAgICAgICAgICAgPHRyPgoNCiAgICAgICAgICAgPHRoIHNjb3BlPSJjb2wiPiZuYnNwOyAmbmJzcDsyKSDsnITsl5Ag7J6R7ISx7ZWcIDLqsIDsp4Ag6rK97ZeYIOykkSAx6rCc66W8IOqzqOudvCDsooAg642UIOyDgeyEuO2VmOqyjCDsnpHshLHtlbQg7KO87Iut7Iuc7JikLjxicj4gJm5ic3A7ICZuYnNwOy0g67O47J247J20IOyEpOygle2VnCDrqqntkZwvIOuqqe2RnOydmCDsiJjrpr0g6rO87KCVLyDsspjsnYzsl5Ag7IOd6rCB7ZaI642YIOuqqe2RnCDri6zshLEg6rCA64ql7ISxLyDsiJjtlokg6rO87KCV7JeQ7IScIOu2gOuUqu2ejCDsnqXslaDrrLwg67CPIOq3uCDrlYzsnZgg6rCQ7KCVKOyDneqwgSkvIOuqqe2RnCDri6zshLHsnYQg7JyE7ZWcIOq1rOyytOyggSDrhbjroKUvIOyLpOygnCDqsrDqs7wvIOqyve2XmOydmCDsp4Tsi6TshLHsnYQg7Kad66qF7ZWgIOyImCDsnojripQg6re86rGw6rCAIOyemCDrk5zrn6zrgpjrj4TroZ0g6riw7IigPC90aD4KICAgICAgIDwvdHI+Cg0KICAgICAgIDx0cj4KDQogICAgICAgPHRkPjx0ZXh0YXJlYSB0aXRsZT0i7J6Q6riw7IaM6rCc7IScIiBzdHlsZT0id2lkdGg6MTAwJTsgaGVpZ2h0OjEwMHB4OyBib3JkZXI6MDsiIGlkPSJ0eHRFc3NheTIiIHJlYWRvbmx5ID4i7Jik7Y+JIg0KMeuFhCDsoJXrj4Qg7ZmN7L2p7JeQ7IScIOyDne2ZnO2VmOupsCDri6TslpHtlZwg7ZmN7L2pIOy5nOq1rOuTpOydhCDrp4zrgqAg6riw7ZqM6rCAIOyeiOyKteuLiOuLpC4g6re465WM66eI64ukIOy5nOq1rOuTpOydtCDtlZzqta3snZgg7ZmU7J6l7ZKI7J2064KYIO2MqOyFmOyXkCDrjIDtlbQg6rSA7Ius7J2EIOqwgOyngOqzoCDsnojsl4jqs6Ag7Yq466CM65SU7ZWcIOyDge2SiOyXkCDrjIDtlbQg7KCA7JeQ6rKMIOusvOyWtOuztOyVmOyKteuLiOuLpC4g6re465+w642wIOyggOuKlCDtirjroIzrk5zsl5Ag64yA7ZW0IOustOq0gOyLrO2WiOq4sCDrlYzrrLjsl5Ag7Ja065akIOuqhe2Zle2VnCDrjIDri7XsnYQg7ZWgIOyImCDsl4bsnYzsnbQg64u164u17ZaI7Iq164uI64ukLiDsnbTrn7Ag64u164u17ZWo7J2EIO2VtOqysO2VmOq4sCDsnITtlbQgYO2VnOulmOydmCDtirjroIzrk5zrpbwg642w7J207YSw66GcIOuztOyXrOykhCDsiJgg7J6I7Jy866m0IOyii+qyoOuLpGDrnbzripQg7IOd6rCB7J2EIOqwgOyngOqyjCDrkJjsl4jsirXri4jri6QuIOq3uOuemOyEnCDtlZzqta3snLzroZwg6reA6rWtIO2bhOyXkCDtmY3svansl5DshJzsnZgg6rK97ZeY7J2EIOuwlO2DleycvOuhnCDsl63sp4Hqtawg7Yq466CM65Oc66W8IOumrOuUqe2VmOuKlCDsh7ztlZEg7ZSM656r7Y+87J20652864qUIOuqqe2RnOulvCDqsIDsp4Dqs6AgMeyduCDqsJzrsJzsnpDroZwg7Jik7Y+J7J20652864qUIOyEnOu5hOyKpOulvCDsi5zsnpHtlZjqsowg65CY7JeI7Iq164uI64ukLg0KMeyduCDqsJzrsJzsnpDsmIDquLAg65WM66y47JeQIOq4sO2ajeu2gO2EsCDqsJzrsJzquYzsp4Ag64+E66eh7JWEIOynhO2Wie2VtOyVvCDtlojripTrjbAg6rCA7J6lIO2emOuTpOyXiOuNmCDsoJDsnYAg6rOg6rCd7JeQIOuMgO2VnCDsnbTtlbTsmIDsirXri4jri6QuIOqzoOqwneydtCDsm5DtlZjripQg642w7J207YSw64qUIOyWtOuWpCDqsoPsnbjsp4Ag6re466as6rOgIOqzoOqwneuTpOydtCDrtojtjrjtlajsnYQg64qQ64G87KeAIOyViuqzoCDsnpDsl7DsiqTrn6zsmrQgVUnrqbTshJwg6riw7KG07J2YIOyHvO2VkeuqsOqzvCDssKjrs4TtmZTrkJwgVUnripQg7Ja065a76rKMIOunjOuTpOyWtOyVvCDtlZjripTsp4Ag65OxIOqzoOqwneyXkCDrjIDtlZwg7IiY66eO7J2AIOqzoOuvvOydhCDtlZjsmIDsp4Drp4wg7Zi87J6QIOqysOuhoCDrgrwg7IiYIOyXhuyXiOyKteuLiOuLpC4g6re4656Y7IScIOy5nOq1rOuTpOydhCDrp4zrgpjrqbAg7Jik7Y+JIOyEnOu5hOyKpOydmCDruYTsoITqs7wg66qp7ZGc7JeQIOuMgO2VtCDshKTrqoXtlZjqs6Ag7Iuc7Jew7ZWY66m07IScIOyLpOygnCDthYzsiqTtirjrpbwg7JqU7LKt7ZWY7JesIO2UvOuTnOuwseydhCDslrvslrTqsJTsirXri4jri6QuIOq3uOufrOuCmCDshJzruYTsiqQg7LSI6riwIOu2gOygleyggeyduCDtlLzrk5zrsLHsnbQg7IyT7Jes6rCA66m07IScIOyekOyLoOqwkOydhCDsnoPslrTqsJTsirXri4jri6QuIOq3uOufrOuCmCDtj6zquLDtlZjsp4Ag7JWK6rOgIO2UvOuTnOuwseyXkCDrjIDtlZwg7ZS865Oc67Cx7J2EIOuwm+q4sCDsnITtlbQg67Ck7IOIIOqwnOuwnOyekeyXheydhCDsp4TtlontlbTshJwg64uk7J2M64KgIOuLpOyLnCDtlLzrk5zrsLHsnYQg67Cb6riw64+EIO2VmOupsCDsmKTtj4kg7ISc67mE7Iqk66W8IO2CpOybjOuCmOqwlOyKteuLiOuLpC4g6re4IOqysOqzvCDsmKTtj4nvvIh3d3cub3B5ZXVuZy5jb23vvInsnbTrnbzripQg7ISc67mE7Iqk66W8IOyZhOyEsSDtlaAg7IiYIOyeiOyXiOqzoCDshJzruYTsiqTrpbwg7ZmN7L2pIOy5nOq1rOuTpOyXkOqyjCDshozqsJwg7ZWgIOyImCDsnojsl4jsirXri4jri6QuIA0K7KCA64qUIOu5hOyghOqzvCDquLDsiKAg6re466as6rOgIOuBiOq4sOqwgCDsnojsl4jquLDsl5Ag7Jik7Y+J7J20656AIOyEnOu5hOyKpOulvCDsmYTshLEg7ZWgIOyImCDsnojsl4jri6Tqs6Ag7IOd6rCB7ZWp64uI64ukLiBTS+2VmOydtOuLieyKpOyXkOyEnOuPhCDquLDsiKDspJHsi6wg6re466as6rOgIO2MqOq4sOyZgCDrgYjquLAg7J6I64qUIOyLoOyeheyCrOybkOycvOuhnCBTS+2VmOydtOuLieyKpOyZgCDqvK0g7ZWo6ruYIO2VmOqzoCDsi7bsirXri4jri6QuPC90ZXh0YXJlYT48L3RkPgoNCiAgIDwvdHI+Cg0KICAgICAgICAgICA8L3Rib2R5PgoNCiAgICAgICA8L3RhYmxlPgoNCiAgICAgICA8dGFibGUgPgoNCiAgICAgICA8Y2FwdGlvbj4g7J6Q6riw7IaM6rCc7IScNCDthYzsnbTruJTsnoXri4jri6QuPGI+Mi4g7IOI66Gc7Jq0IOqyg+ydhCDsoJHrqqntlZjqsbDrgpgg64Ko64uk66W4IOyVhOydtOuUlOyWtOulvCDthrXtlbQg66y47KCc66W8IOqwnOyEoO2WiOuNmCDqsr3tl5jsl5Ag64yA7ZW0IOyEnOyIoO2VtCDso7zsi63si5zsmKQuPC9iPjxicj4gICAxKSDrqLzsoIAsIOq0gOugqCDrjIDtkZwg6rK97ZeYIDLqsIDsp4Drpbwg6rCE65617ZWY6rKMIOyekeyEse2VtCDso7zsi63si5zsmKQuICjqsIEgNTDsnpAg7J2064K0KTxicj4gICAtIOyWuOygnCwg7Ja065SU7IScLCDslrTrlqQg7J287J2EIOyImO2Wie2WiOuNmCDqsr3tl5jsnbjsp4Ag6rCE65617ZWY6rKMIOq4sOyIoO2VoCDqsoMg66GcIOq1rOyEsTwvY2FwdGlvbj4KDQogICAgICAgICAgIDx0Ym9keT4KDQogICAgICAgICAgIDx0cj4KDQogICAgICAgICAgIDx0aCBzY29wZT0iY29sIj48Yj4yLiDsg4jroZzsmrQg6rKD7J2EIOygkeuqqe2VmOqxsOuCmCDrgqjri6Trpbgg7JWE7J2065SU7Ja066W8IO2Gte2VtCDrrLjsoJzrpbwg6rCc7ISg7ZaI642YIOqyve2XmOyXkCDrjIDtlbQg7ISc7Iig7ZW0IOyjvOyLreyLnOyYpC48L2I+PGJyPiZuYnNwOyAmbmJzcDsxKSDrqLzsoIAsIOq0gOugqCDrjIDtkZwg6rK97ZeYIDLqsIDsp4Drpbwg6rCE65617ZWY6rKMIOyekeyEse2VtCDso7zsi63si5zsmKQuICjqsIEgNTDsnpAg7J2064K0KTxicj4mbmJzcDsgJm5ic3A7LSDslrjsoJwsIOyWtOuUlOyEnCwg7Ja065akIOydvOydhCDsiJjtlontlojrjZgg6rK97ZeY7J247KeAIOqwhOuete2VmOqyjCDquLDsiKDtlaAg6rKDPC90aD4KICAgICAgIDwvdHI+Cg0KICAgICAgIDx0cj4KDQogICAgICAgPHRkPiZuYnNwOyAmbmJzcDsgJm5ic3A7IDxmb250IHNpemU9Mz7ikaA8L2ZvbnQ+Jm5ic3A7U05T7JeQ7ISc7J2YIOuTpOyXiOuNmCDsuZzqtazsnZgg6rOg66+87J2EIO2UhOuhnOq3uOueqOydhCDrp4zrk6TslrQg7ZW06rKw7ZW07KO87JeI642YIOqyve2XmDwvdGV4dGFyZWE+PC90ZD4KDQogICA8L3RyPgoNCiAgICAgICAgICAgPC90Ym9keT4KDQogICAgICAgPC90YWJsZT4KDQogICAgICAgPHRhYmxlICBzdHlsZT0nYm9yZGVyOjA7IHBhZGRpbmc6MCAwIDAgMDsnPgoNCiAgICAgICA8Y2FwdGlvbj4g7J6Q6riw7IaM6rCc7IScNSDthYzsnbTruJTsnoXri4jri6QuIOuhnCDqtazshLE8L2NhcHRpb24+Cg0KICAgICAgICAgICA8dGJvZHk+Cg0KICAgICAgICAgICA8dHI+Cg0KICAgICAgIDwvdHI+Cg0KICAgICAgIDx0cj4KDQogICAgICAgPHRkPiZuYnNwOyAmbmJzcDsgJm5ic3A7IDxmb250IHNpemU9Mz7ikaE8L2ZvbnQ+Jm5ic3A77ZmN7L2pIOuhnOy7rCDtmozsgqzsl5DshJwg7ZWc6rWtIOq4sOyXheyXkOyEnCDrsLDsmrQg7KeA7Iud7J2EIO2ZnOyaqe2WiOuNmCDqsr3tl5g8L3RleHRhcmVhPjwvdGQ+Cg0KICAgPC90cj4KDQogICAgICAgICAgIDwvdGJvZHk+Cg0KICAgICAgIDwvdGFibGU+Cg0KICAgICAgIDx0YWJsZSAgc3R5bGU9J2JvcmRlcjowOyBwYWRkaW5nOjAgMCAwIDA7Jz4KDQogICAgICAgPGNhcHRpb24+IOyekOq4sOyGjOqwnOyEnDYg7YWM7J2067iU7J6F64uI64ukLiAgIDIpIOychOyXkCDsnpHshLHtlZwgMuqwgOyngCDqsr3tl5gg7KSRIDHqsJzrpbwg6rOo6528IOyigCDrjZQg7IOB7IS47ZWY6rKMIOyekeyEse2VtCDso7zsi63si5zsmKQuPGJyPiAgIC0g6riw7KG0IOuwqeyLneqzvCDrs7jsnbjsnbQg7Iuc64+E7ZWcIOuwqeyLneydmCDssKjsnbQvIOyDiOuhnOyatCDsi5zrj4Trpbwg7ZWY6rKMIOuQnCDqs4TquLAvIOyDiOuhnOyatCDsi5zrj4Trpbwg7ZaI7J2EIOuVjOydmCDso7zrs4Ag67CY7J2RLyDsg4jroZzsmrQg7Iuc64+E66W8IOychO2VtCDqsJDsiJjtlbTslbwg7ZaI642YIOygkC8g6rWs7LK07KCB7J24IOyLpO2WiSDqs7zsoJUg67CPIOqysOqzvC8g6rK97ZeY7J2YIOynhOyLpOyEseydhCDspp3rqoXtlaAg7IiYIOyeiOuKlCDqt7zqsbDqsIAg7J6YIOuTnOufrOuCmOuPhOuhnSDquLDsiKAg66GcIOq1rOyEsTwvY2FwdGlvbj4KDQogICAgICAgICAgIDx0Ym9keT4KDQogICAgICAgICAgIDx0cj4KDQogICAgICAgICAgIDx0aCBzY29wZT0iY29sIj4mbmJzcDsgJm5ic3A7Mikg7JyE7JeQIOyekeyEse2VnCAy6rCA7KeAIOqyve2XmCDspJEgMeqwnOulvCDqs6jrnbwg7KKAIOuNlCDsg4HshLjtlZjqsowg7J6R7ISx7ZW0IOyjvOyLreyLnOyYpC48YnI+Jm5ic3A7ICZuYnNwOy0g6riw7KG0IOuwqeyLneqzvCDrs7jsnbjsnbQg7Iuc64+E7ZWcIOuwqeyLneydmCDssKjsnbQvIOyDiOuhnOyatCDsi5zrj4Trpbwg7ZWY6rKMIOuQnCDqs4TquLAvIOyDiOuhnOyatCDsi5zrj4Trpbwg7ZaI7J2EIOuVjOydmCDso7zrs4Ag67CY7J2RLyDsg4jroZzsmrQg7Iuc64+E66W8IOychO2VtCDqsJDsiJjtlbTslbwg7ZaI642YIOygkC8g6rWs7LK07KCB7J24IOyLpO2WiSDqs7zsoJUg67CPIOqysOqzvC8g6rK97ZeY7J2YIOynhOyLpOyEseydhCDspp3rqoXtlaAg7IiYIOyeiOuKlCDqt7zqsbDqsIAg7J6YIOuTnOufrOuCmOuPhOuhnSDquLDsiKA8L3RoPgogICAgICAgPC90cj4KDQogICAgICAgPHRyPgoNCiAgICAgICA8dGQ+PHRleHRhcmVhIHRpdGxlPSLsnpDquLDshozqsJzshJwiIHN0eWxlPSJ3aWR0aDoxMDAlOyBoZWlnaHQ6MTAwcHg7IGJvcmRlcjowOyIgaWQ9InR4dEVzc2F5NSIgcmVhZG9ubHkgPiLsnbTrr7jsp4Ag7LKY66asIO2UhOuhnOq3uOueqCINCuuplOyLoOyguOyXkOyEnCDsuZzqtazrk6Tqs7wg64yA7ZmU7ZWY642YIOykkSDslbzqt7wg7KSR7J24IOy5nOq1rOydmCDqs6DstqnsnYQg7Jqw7Jew7Z6IIOuTo+qyjCDrkJjsl4jsirXri4jri6QuIDEwMOqwnOydmCDsnbTrr7jsp4DqsIAg7J6I64qU642wIOuPmeydvO2VnCDtgazquLDroZwg7Y647KeRIO2VtOyVvO2VnOuLpOuKlCDqsoPsnbTsmIDsirXri4jri6QuIOydtOulvCDsnITtlbQg7Lmc6rWs64qUIE1TIE9mZmljZSDrpbwg7J207Jqp7ZW07IScIOydtOuvuOyngOulvCDtlZjrgpjslKkg67aI65+s7JmAIOydtOuvuOyngOulvCDrpqzsgqzsnbTsp5Ug7ZWY6rOgIOyeiOuKlOuNsCDrhIjrrLQg7KeA6rK564uk64qUIOy5nOq1rOydmCDtlZjshozsl7DsnbTsmIDsirXri4jri6QuIOy5nOq1rOyXkOqyjCDtlITroZzqt7jrnqjsnYQg7IKs7Jqp7ZWgIOqyg+ydhCDsoJzslYjtlojsp4Drp4wg7ZW064u57J6R7JeF7J2EIOychO2VnCDrp4jrlYXtlZwg7ZSE66Gc6re4656o7J20IOyXhuqzoCDtlITroZzqt7jrnqjsnYQg7LC+7JWEIOyEpOy5mO2VmOqzoCDrsLDsmrDripQg7Iuc6rCE67O064ukIO2VmOuCmOyUqe2VmOuKlOqyjCDrjZQg67mg66W064uk64qUIOyDneqwgeycvOuhnCDqt7gg7Lmc6rWs64qUIOyVvOq3vOydhCDtlZjqs6Ag7J6I7JeI7Iq164uI64ukLiDsuZzqtazripQg6re464OlIOu5qOumrCDtlZjrqbQg65CY6riwIOuVjOusuOyXkCDtlITroZzqt7jrnqjsnYAg7ZWE7JqU7JeG64uk6rOgIOqzhOyGjSDso7zsnqXtlZjsmIDsp4Drp4wg7KCA64qUIOuwmOuzteyggeyduCDsnpHsl4XsnYAg7ZSE66Gc6re4656o7J2EIO2Gte2VtCDsnpDrj5ntmZQg7ZWY64qU6rKD7J20IO2aqOycqOyggeydtOq4sCDrlYzrrLjsl5Ag7ZSE66Gc6re4656o7J20IOyXhuuLpOuptCDtlITroZzqt7jrnqjsnYQg66eM65Ok7Ja0IOy5nOq1rOydmCDth7Tqt7zsnYQg64+E7JmA7JW86rKg64uk6rOgIOyDneqwge2VmOqzoCDtlonrj5ntlojsirXri4jri6QuICANCuq3uOuemOyEnCDth7Tqt7wg7ZuEIOyggOuFgeyLnOqwhOydhCDtmZzsmqntlbTshJwgUHl0aG9u7J2EIOydtOyaqe2VtCDsuZzqtazrp4zsnYQg7JyE7ZWcIOydtOuvuOyngCDtjrjsp5Eg7ZSE66Gc6re4656o7J2EIOunjOuTpOyWtCDsoJzqs7XtlZjsmIDsirXri4jri6QuIOyCrOyLpCDsoJzqsIAg7ZSE66Gc6re4656o7J2EIOyZhOyEse2WiOydhCDsr6Tsl5DripQg7Lmc6rWs6rCAIOuMgOu2gOu2hOydmCDsnbTrr7jsp4Ag7J6R7JeF7J2EIOuniOy5nCDtm4TsmIDsirXri4jri6QuIOq3uOufvOyXkOuPhCDsuZzqtazsl5Dqsowg64Ko7J2AIOydtOuvuOyngOuKlCDsoJzqsIAg66eM65OgIO2UhOuhnOq3uOueqOydhCDsnbTsmqntlbQg7J6R7JeF7ZW067O065286rOgIOyhsOyWuO2WiOqzoCDqt7gg6rKw6rO8IOy5nOq1rOuKlCDrgqjsnYAg7J6R7JeF7J2EIOuniOustOumrO2VmOqzoCDth7Tqt7wg7ZWgIOyImCDsnojsl4jsirXri4jri6QuIOy5nOq1rOyXkOqyjOyEnCDslrTrlqQg67O07IOB64+EIOuwm+yngCDrqrvtlojsp4Drp4wg66qH7J28IOuSpCDrmJHqsJnsnYAg7J287J2EIOuLpOyLnCDtlbTslbztlojrjZgg7Lmc6rWs7JeQ6rKM7IScICLtlITroZzqt7jrnqjsnYQg66eM65Ok7Ja07KSY7IScIOyYpOuKmCDsnbzssI0g7Ye06re8IO2VoCDsiJgg7J6I7J2E6rKDIOqwmeuLpC4g6rOg66eZ64ukIiDrnbzripQg66mU7IS47KeA66W8IOuwm+yVmOydhCDrlYwg7Ja065akIOq4iOyghOyggeyduCDrs7Tsg4Hrs7Tri6Qg6rCA7LmY7J6I64qUIOuztOuejOydhCDripDrgoQg7IiYIOyeiOyXiOyKteuLiOuLpC4gDQpTS+2VmOydtOuLieyKpOyXkOyEnOuPhCDsoJzqsIAg66eh7J2AIOyXheustOulvCDsp4TtlontlZjrqbTshJwg65iQ64qUIOyEoOuwsC/rj5nro4zrk6Tqs7wg7ZWo6ruYIOydvO2VmOuptOyEnCDsg4jroZzsmrQg7Iuc64+E66W8IO2Gte2VtCDrjZQg7Zqo7Jyo7KCB7Jy866GcIOyXheustOulvCDqsJzshKDtlaAg7IiYIOyeiOuLpOuptCDsi5zrj4TtlbTshJwg67O0656M7J2EIOuKkOuBvOqzoCBTS+2VmOydtOuLieyKpOydmCDshLHsnqXsl5Ag64+E7JuA7J2EIOyjvOuKlCDsl63tmZzsnYQg7ZWY6rOgIOyLtuyKteuLiOuLpC48L3RleHRhcmVhPjwvdGQ+Cg0KICAgPC90cj4KDQogICAgICAgICAgIDwvdGJvZHk+Cg0KICAgICAgIDwvdGFibGU+Cg0KICAgICAgIDx0YWJsZSA+Cg0KICAgICAgIDxjYXB0aW9uPiDsnpDquLDshozqsJzshJw3IO2FjOydtOu4lOyeheuLiOuLpC48Yj4zLiDsp4Dsm5Ag67aE7JW87JmAIOq0gOugqO2VmOyXrCDtirnsoJUg7JiB7Jet7J2YIOyghOusuOyEseydhCDtgqTsmrDquLAg7JyE7ZW0IOq+uOykgO2eiCDrhbjroKXtlZwg6rK97ZeY7JeQIOuMgO2VtCDshJzsiKDtlbQg7KO87Iut7Iuc7JikLjwvYj48YnI+ICAgIC0g7KCE66y47ISx7J2YIOq1rOyytOyggSDsmIHsl60o7JiILiDthrXqs4TrtoTshJ0pLyDsoITrrLjshLHsnYQg64aS7J206riwIOychO2VnCDtlZnsirUg6rO87KCVLyDsoITrrLjshLEg7ZqN65Od7J2EIOychO2VtCDtiKzsnoXtlZwg7Iuc6rCEIOuwjyDrsKnrspUvIOyKteuTne2VnCDsp4Dsi50g67CPIOq4sOyIoOydhCDsi6TsoITsoIHsnLzroZwg7KCB7Jqp7ZW0IOuzuCDsgqzroYAvIOyghOusuOyEseydhCDqsJ3qtIDsoIHsnLzroZwg7ZmV7J247ZWcIOqyve2XmC8g7KCE66y47ISxIO2WpeyDgeydhCDsnITtlbQg6rWQ66WY7ZWY6rOgIOyeiOuKlCDrhKTtirjsm4ztgawvIOqyve2XmOydmCDsp4Tsi6TshLHsnYQg7Kad66qF7ZWgIOyImCDsnojripQg6re86rGw6rCAIOyemCDrk5zrn6zrgpjrj4TroZ0g6riw7IigIOuhnCDqtazshLE8L2NhcHRpb24+Cg0KICAgICAgICAgICA8dGJvZHk+Cg0KICAgICAgICAgICA8dHI+Cg0KICAgICAgICAgICA8dGggc2NvcGU9ImNvbCI+PGI+My4g7KeA7JuQIOu2hOyVvOyZgCDqtIDroKjtlZjsl6wg7Yq57KCVIOyYgeyXreydmCDsoITrrLjshLHsnYQg7YKk7Jqw6riwIOychO2VtCDqvrjspIDtnogg64W466Cl7ZWcIOqyve2XmOyXkCDrjIDtlbQg7ISc7Iig7ZW0IOyjvOyLreyLnOyYpC48L2I+PGJyPiZuYnNwOyAmbmJzcDsgLSDsoITrrLjshLHsnZgg6rWs7LK07KCBIOyYgeyXrSjsmIguIO2GteqzhOu2hOyEnSkvIOyghOusuOyEseydhCDrhpLsnbTquLAg7JyE7ZWcIO2VmeyKtSDqs7zsoJUvIOyghOusuOyEsSDtmo3rk53snYQg7JyE7ZW0IO2IrOyehe2VnCDsi5zqsIQg67CPIOuwqeuylS8g7Iq165Od7ZWcIOyngOyLnSDrsI8g6riw7Iig7J2EIOyLpOyghOyggeycvOuhnCDsoIHsmqntlbQg67O4IOyCrOuhgC8g7KCE66y47ISx7J2EIOqwneq0gOyggeycvOuhnCDtmZXsnbjtlZwg6rK97ZeYLyDsoITrrLjshLEg7Zal7IOB7J2EIOychO2VtCDqtZDrpZjtlZjqs6Ag7J6I64qUIOuEpO2KuOybjO2BrC8g6rK97ZeY7J2YIOynhOyLpOyEseydhCDspp3rqoXtlaAg7IiYIOyeiOuKlCDqt7zqsbDqsIAg7J6YIOuTnOufrOuCmOuPhOuhnSDquLDsiKA8L3RoPgogICAgICAgPC90cj4KDQogICAgICAgPHRyPgoNCiAgICAgICA8dGQ+PHRleHRhcmVhIHRpdGxlPSLsnpDquLDshozqsJzshJwiIHN0eWxlPSJ3aWR0aDoxMDAlOyBoZWlnaHQ6MTAwcHg7IGJvcmRlcjowOyIgaWQ9InR4dEVzc2F5NiIgcmVhZG9ubHkgPuuMgO2VmSDsi5zsoIggSmF2YSDqsJnsnYAg7KCE7IKwIOq0gOugqCDsiJjsl4XsnYQg65Ok7Jy866m07IScIElU7JeQIOuMgO2VnCDqtIDsi6zsnYQg7YKk7JuM64KY6rCU7Iq164uI64ukLiDtlZnqs7wg7IiY7JeF7J20IOyVhOuLjCDtmITsl4Xsl5DshJwgSVTrpbwg6rK97ZeY7ZW067O06rOgIOyLtuyWtCDrsKntlZnsnYQg7Zmc7Jqp7ZW0IElCTeqzvCBMRyBDTlPsl5DshJwg7J247YS07J2EIOynhO2Wie2VmOyYgOqzoCDsobjsl4Ug7ZuE7JeQ64qUIExHIENOU+yXkOyEnCDssqsg7Luk66as7Ja066W8IOyLnOyeke2WiOyKteuLiOuLpC4gMuuFhCDsobDquIgg64SY64qUIOyLnOqwhOuPmeyViCBMRyDsnpDrp6TsgqzsnZggRVJQIOqzoOuPhO2ZlOuCmCDsmIHsl4Xtj6zthLgg6rCZ7J2AIFNJ7ZSE66Gc7KCd7Yq466W8IOynhO2Wie2VmOupsCDsoIDsnZggSVTsl63rn4nsnYQg7ISx7J6l7Iuc7LycIOuCmOqwlOyKteuLiOuLpC4g64uo7Iic7Z6IIOqwnOuwnCDsl63rn4nsnZgg7ISx7J6l66eM7J20IOyVhOuLjCDsl4XrrLTrpbwg7J207ZW07ZWY6rOgIOyCrOyaqeyekOuTpOydhCDsnbTtlbQg7ZWgIOyImCDsnojripQg7Jet65+J7J2EIO2CpOybjOuCmOqwlOuLpOqzoCDsg53qsIHtlanri4jri6QuIA0K6re4IOykkSDsl5jsp4DtmZTtlZkgRVJQ7ZSE66Gc7KCd7Yq464qUIOqwgOyepSDquLDslrXsl5Ag64Ko64qUIO2UhOuhnOygne2KuOyduCDqsoMg6rCZ7Iq164uI64ukLiDsmKTrnpjsoITsl5Ag6rCc67Cc65CcIEVSUCDsi5zsiqTthZzsnYQg7IKs7Jqp7KSR7J24IOyCrOyaqeyekOuTpOydgCDrtojtjrjtlZwgVUnsmYAg7JuQ7ZWY64qUIOuNsOydtO2EsOqwgCBFUlAg64K07JeQIOygleumrCDrkJjslrQg7J6I7KeAIOyViuyVmOq4sCDrlYzrrLjsl5AgRVJQ7JeQ7IScIOuNsOydtO2EsOulvCDrgrTroKTrsJvslYQg64uk7IucIOyVoeyFgOyXkOyEnCDsoJXrpqztlZjripQg7J6R7JeF7J2EIO2Gte2VtCDsl4XrrLTrpbwg7KeE7ZaJ7ZWY6rOgIOyeiOyXiOyKteuLiOuLpC4g7J2065+wIOusuOygnOulvCDtlbTqsrDtlZjquLAg7JyE7ZW0IOuwsOy5mO2UhOuhnOq3uOueqOydhCDrp4zrk6TslrQgRVJQ7JeQ7IScIOuNsOydtO2EsOulvCDrsJvslYQgRELsl5Ag7KCA7J6l7ZWY6rOgIOybuSDquLDsiKDsnYQg7Zmc7Jqp7ZW0IOyCrOyaqeyekOuTpOydtCDsm5DtlZjripQg642w7J207YSw66W8IOq3uOuemO2UhOuhnCDsi5zqsIHtmZQg7ZWY7JiA7Iq164uI64ukLiDqt7gg6rKw6rO8IOyCrOyaqeyekOuTpOydgCDstpTqsIDsoIHsnbgg7JeR7IWAIOyekeyXheydhCDtlaAg7ZWE7JqU6rCAIOyXhuyWtOyhjOqzoCDsm7nsnYQg7Ya17ZW0IO2MgOybkOuTpOqwhCDrjbDsnbTthLDrpbwg6rO17JygIO2VoCDsiJgg7J6I7Ja0IOybkO2ZnO2VnCDsu6TrrqTri4jshZjsnbQg7KeE7ZaJIOuQmOyXiOuLpOuKlCDtlLzrk5zrsLHsnYQg7IKs7Jqp7J6Q65Ok66Gc67aA7YSwIOuwm+yVmOydhCDsiJgg7J6I7JeI7Iq164uI64ukLg0K7J2066CH6rKMIOuLpOyWke2VnCBJVO2UhOuhnOygne2KuOulvCDsp4TtlontlZjrqbAg7IKs7Jqp7J6Q65Ok6rO8IOunjOuCmCDqt7jrk6TsnZgg7JeF66y066W8IOydtO2VtO2VmOqzoCDqt7jrk6TsnbQg6rCA7KeA6rOgIOyeiOuNmCDslrTroKTsm4DsnYQgSVTquLDsiKDroZwg7ZW06rKw7ZW0IOuCmOqwlOyKteuLiOuLpC4g6re4IOqysOqzvCDsmpTqtazsgqztla0g67aE7ISd7J2064KYIOyVoOyekOydvCDrsKnrspXroaAg6rCZ7J2AIO2UhOuhnOygne2KuCDqtIDrpqwg7Lih66m067+Q66eM7J2064KY66asIE9yYWNsZSwgTVMtU1FMIOqwmeydgCBEQiDshKTqs4QsIOq1rOy2leydtOuCmCBKYXZh7Ja07ZSM66as7LyA7J207IWYIOqwnOuwnOy4oeuptOq5jOyngCDsoIDsnZgg7Jet65+J7J2EIO2CpOyauCDsiJgg7J6I7JeI7Iq164uI64ukLiBTSyDtlZjsnbTri4nsiqTsl5DshJwg6re466as6rOgIOygnOqwgCDsp4Dsm5DtlZwgSVTtjIDsl5DshJwg7J287ZWY6riwIOychO2VtCDsoIDripQg7KeA64KcIOyLnOqwhCDsoIDrp4zsnZgg7KCE66y47ISx7J2EIO2CpOybjOyZlOyKteuLiOuLpC4g6re466as6rOgIOydtOygnCDqt7gg7Jet65+J7J2EIOuwlO2DleycvOuhnCDsoIDsmYAgU0vtlZjsnbTri4nsiqTsnbQg7ZWo6ruYIOyEseyepSDtlaAg7IiYIOyeiOuKlCDsi5zqsITrk6TsnYQg66eM65Ok7Ja0IOuCmOqwgOqzoCDsi7bsirXri4jri6QuPC90ZXh0YXJlYT48L3RkPgoNCiAgIDwvdHI+Cg0KICAgICAgICAgICA8L3Rib2R5PgoNCiAgICAgICA8L3RhYmxlPgoNCiAgICAgICA8dGFibGUgPgoNCiAgICAgICA8Y2FwdGlvbj4g7J6Q6riw7IaM6rCc7IScOCDthYzsnbTruJTsnoXri4jri6QuPGI+NC4g7Zi87J6QIO2VmOq4sCDslrTroKTsmrQg7J287JeQ7IScIOuLpOyWke2VnCDsnpDsm5Ag7Zmc7JqpLCDtg4DsnbjsnZgg7ZiR66Cl7J2EIOy1nOuMgO2VnOycvOuhnCDsnbTrgYzslrQg64K066mwLCBUZWFtd29ya+ydhCDrsJztnJjtlZjsl6wg6rO164+Z7J2YIOuqqe2RnCDri6zshLHsl5Ag6riw7Jes7ZWcIOqyve2XmOyXkCDrjIDtlbQg7ISc7Iig7ZW0IOyjvOyLreyLnOyYpC48L2I+PGJyPiAgIDEpIOuovOyggCwg6rSA66CoIOuMgO2RnCDqsr3tl5ggMuqwgOyngOulvCDqsITrnrXtlZjqsowg7J6R7ISx7ZW0IOyjvOyLreyLnOyYpC4gKOqwgSA1MOyekCDsnbTrgrQpPGJyPiAgIC0g7Ja47KCcLCDslrTrlJTshJwsIOyWtOuWpCDsnbzsnYQg7IiY7ZaJ7ZaI642YIOqyve2XmOyduOyngCDqsITrnrXtlZjqsowg6riw7Iig7ZWgIOqygyDroZwg6rWs7ISxPC9jYXB0aW9uPgoNCiAgICAgICAgICAgPHRib2R5PgoNCiAgICAgICAgICAgPHRyPgoNCiAgICAgICAgICAgPHRoIHNjb3BlPSJjb2wiPjxiPjQuIO2YvOyekCDtlZjquLAg7Ja066Ck7Jq0IOydvOyXkOyEnCDri6TslpHtlZwg7J6Q7JuQIO2ZnOyaqSwg7YOA7J247J2YIO2YkeugpeydhCDstZzrjIDtlZzsnLzroZwg7J2064GM7Ja0IOuCtOupsCwgVGVhbXdvcmvsnYQg67Cc7ZyY7ZWY7JesIOqzteuPmeydmCDrqqntkZwg64us7ISx7JeQIOq4sOyXrO2VnCDqsr3tl5jsl5Ag64yA7ZW0IOyEnOyIoO2VtCDso7zsi63si5zsmKQuPC9iPjxicj4mbmJzcDsgJm5ic3A7MSkg66i87KCALCDqtIDroKgg64yA7ZGcIOqyve2XmCAy6rCA7KeA66W8IOqwhOuete2VmOqyjCDsnpHshLHtlbQg7KO87Iut7Iuc7JikLiAo6rCBIDUw7J6QIOydtOuCtCk8YnI+Jm5ic3A7ICZuYnNwOy0g7Ja47KCcLCDslrTrlJTshJwsIOyWtOuWpCDsnbzsnYQg7IiY7ZaJ7ZaI642YIOqyve2XmOyduOyngCDqsITrnrXtlZjqsowg6riw7Iig7ZWgIOqygzwvdGg+CiAgICAgICA8L3RyPgoNCiAgICAgICA8dHI+Cg0KICAgICAgIDx0ZD4mbmJzcDsgJm5ic3A7ICZuYnNwOyA8Zm9udCBzaXplPTM+4pGgPC9mb250PiZuYnNwO+uztOyViO2MgCDrj5nquLDsmYAg6riw7IigIOyKpO2EsOuUlOulvCDsp4TtlontlZjsmIDrjZgg6rK97ZeYPC90ZXh0YXJlYT48L3RkPgoNCiAgIDwvdHI+Cg0KICAgICAgICAgICA8L3Rib2R5PgoNCiAgICAgICA8L3RhYmxlPgoNCiAgICAgICA8dGFibGUgIHN0eWxlPSdib3JkZXI6MDsgcGFkZGluZzowIDAgMCAwOyc+Cg0KICAgICAgIDxjYXB0aW9uPiDsnpDquLDshozqsJzshJw5IO2FjOydtOu4lOyeheuLiOuLpC4g66GcIOq1rOyEsTwvY2FwdGlvbj4KDQogICAgICAgICAgIDx0Ym9keT4KDQogICAgICAgICAgIDx0cj4KDQogICAgICAgPC90cj4KDQogICAgICAgPHRyPgoNCiAgICAgICA8dGQ+Jm5ic3A7ICZuYnNwOyAmbmJzcDsgPGZvbnQgc2l6ZT0zPuKRoTwvZm9udD4mbmJzcDvrjIDtlZkg7Iuc7KCIIOqzteuqqOyghOyXkCDrj4TsoITtlZjrqbTshJwg64yA7KCEIOygleu2gOyyreyCrOulvCDrsKnrrLjtlojrjZgg6rK97ZeYPC90ZXh0YXJlYT48L3RkPgoNCiAgIDwvdHI+Cg0KICAgICAgICAgICA8L3Rib2R5PgoNCiAgICAgICA8L3RhYmxlPgoNCiAgICAgICA8dGFibGUgIHN0eWxlPSdib3JkZXI6MDsgcGFkZGluZzowIDAgMCAwOyc+Cg0KICAgICAgIDxjYXB0aW9uPiDsnpDquLDshozqsJzshJwxMCDthYzsnbTruJTsnoXri4jri6QuICAgMikg7JyE7JeQIOyekeyEse2VnCAy6rCA7KeAIOqyve2XmCDspJEgMeqwnOulvCDqs6jrnbwg7KKAIOuNlCDsg4HshLjtlZjqsowg7J6R7ISx7ZW0IOyjvOyLreyLnOyYpC48YnI+ICAgLSDqtIDroKjrkJwg7IKs656M65Ok7J2YIOq0gOqzhCjsmIguIOy5nOq1rCwg7KeB7J6lIOuPmeujjCkg67CPIOyXre2VoC8g7Zi87J6QIO2VmOq4sCDslrTroLXri6Tqs6Ag7YyQ64uo7ZWcIOydtOycoC8g66qp7ZGcIOyEpOyglSDqs7zsoJUvIOyekOybkCjsmIguIOyCrOuejCwg7J6Q66OMIOuTsSkg7Zmc7JqpIOqzhO2ajSDrsI8g7ZaJ64+ZLyDqtazshLHsm5Drk6TsnZgg7LC47Jes64+EIOuwjyDsnZjqsqwg7LCo7J20LyDqt7jsl5Ag64yA7ZWcIOuMgOydkSDrsI8g7ZiR7KGw66W8IOydtOuBjOyWtCDrgrTquLAg7JyE7ZWcIOq1rOyytOyggSDtlonrj5kvIOuqqe2RnCDri6zshLEg7KCV64+EIOuwjyDrs7jsnbjsnZgg6riw7Jes64+ELyDqsr3tl5jsnZgg7KeE7Iuk7ISx7J2EIOymneuqhe2VoCDsiJgg7J6I64qUIOq3vOqxsOqwgCDsnpgg65Oc65+s64KY64+E66GdIOq4sOyIoCDroZwg6rWs7ISxPC9jYXB0aW9uPgoNCiAgICAgICAgICAgPHRib2R5PgoNCiAgICAgICAgICAgPHRyPgoNCiAgICAgICAgICAgPHRoIHNjb3BlPSJjb2wiPiZuYnNwOyAmbmJzcDsyKSDsnITsl5Ag7J6R7ISx7ZWcIDLqsIDsp4Ag6rK97ZeYIOykkSAx6rCc66W8IOqzqOudvCDsooAg642UIOyDgeyEuO2VmOqyjCDsnpHshLHtlbQg7KO87Iut7Iuc7JikLjxicj4mbmJzcDsgJm5ic3A7LSDqtIDroKjrkJwg7IKs656M65Ok7J2YIOq0gOqzhCjsmIguIOy5nOq1rCwg7KeB7J6lIOuPmeujjCkg67CPIOyXre2VoC8g7Zi87J6QIO2VmOq4sCDslrTroLXri6Tqs6Ag7YyQ64uo7ZWcIOydtOycoC8g66qp7ZGcIOyEpOyglSDqs7zsoJUvIOyekOybkCjsmIguIOyCrOuejCwg7J6Q66OMIOuTsSkg7Zmc7JqpIOqzhO2ajSDrsI8g7ZaJ64+ZLyDqtazshLHsm5Drk6TsnZgg7LC47Jes64+EIOuwjyDsnZjqsqwg7LCo7J20LyDqt7jsl5Ag64yA7ZWcIOuMgOydkSDrsI8g7ZiR7KGw66W8IOydtOuBjOyWtCDrgrTquLAg7JyE7ZWcIOq1rOyytOyggSDtlonrj5kvIOuqqe2RnCDri6zshLEg7KCV64+EIOuwjyDrs7jsnbjsnZgg6riw7Jes64+ELyDqsr3tl5jsnZgg7KeE7Iuk7ISx7J2EIOymneuqhe2VoCDsiJgg7J6I64qUIOq3vOqxsOqwgCDsnpgg65Oc65+s64KY64+E66GdIOq4sOyIoDwvdGg+CiAgICAgICA8L3RyPgoNCiAgICAgICA8dHI+Cg0KICAgICAgIDx0ZD48dGV4dGFyZWEgdGl0bGU9IuyekOq4sOyGjOqwnOyEnCIgc3R5bGU9IndpZHRoOjEwMCU7IGhlaWdodDoxMDBweDsgYm9yZGVyOjA7IiBpZD0idHh0RXNzYXk5IiByZWFkb25seSA+Iuq4sOyIoCDsiqTthLDrlJQiDQrsp4Drgpwg7ZqM7IKs7JeQ7IScIOybueqwnOuwnCDtjIDsl5DshJwg6re866y07ZWY66m07IScIOybueqzvCDqtIDroKjrkJwg6riw7Iig6rO8IO2UhOuhnOygne2KuOulvCDqsr3tl5jtlZjrqbAg7KCA7J2YIOyXreufieydhCDsjJPsnYQg7IiYIOyeiOyXiOyKteuLiOuLpC4g6re465+s64KYLCDsm7kg6rCc67CcIOyXreufieydtCDslYTri4wg64uk66W4IElU6riw7Iig7JeQIOuMgO2VtOyEnOuPhCDtmLjquLDsi6zsnbQg7IOd6rKoIOuztOyViO2MgOyXkOyEnCDqt7zrrLTtlZjrjZgg7Lmc7ZWcIOuPmeq4sOyXkOqyjCDquLDsiKAg7Iqk7YSw65SU66W8IOygnOyViO2WiOyKteuLiOuLpC4g65WM66eI7LmoIOq3uCDsuZzqtazrj4Qg67O07JWIIOyXheustOulvCDsnITtlbQg7Ju57JeQIOuMgO2VnCDsnbTtlbTsmYAg7Jet65+J7J2EIOyMk+ydhCDtlYTsmpTshLHsnYQg64qQ64G86rOgIOyeiOyXiOq4sOyXkCDsnpDsl7DsiqTrn73qsowg7ISc66Gc7J2YIOqyve2XmOqzvCDsp4Dsi53snYQg6rO17JygIO2VoCDsiJgg7J6I64qUIOyekOumrOqwgCDrp4zrk6TslrTsoYzsirXri4jri6QuIOyjvOunkOuniOuLpCDrqqjsspjsl5Ag66qo7JesIOy5nOq1rOuhnOu2gO2EsCDrs7TslYjqs7wg6rSA66Co65CcIO2VtO2CuSDquLDsiKDsnbTrnbzrk6Dsp4Ag67O07JWIIO2KuOugjOuTnOyXkCDrjIDtlbQg65Oj6rOgIOyLpOygnOuhnCDsh7zri6jsnbTrnbzripQg7ZSM656r7Y+87J2EIO2ZnOyaqe2VtCDrqqjsnZgg7ZW07YK57J2EIOynhO2Wie2VtOuztOq4sOuPhCDtlZjsmIDsirXri4jri6QuIOyggOuKlCDsm7kg6rCc67CcIO2UhOuhnOyEuOyKpOyXkCDrjIDtlbQg7ISk66qF7ZWY66m07IScIOqwnOuwnOyekOuTpOydtCDslrTripAg7KCV64+EIOuztOyViOyXkCDrjIDtlZwg7KGw7LmY66W8IO2VmOuptOyEnCDqsJzrsJzsnYQg7KeE7ZaJ7ZWY64qU7KeA7JmAIOygnOqwgCDslYzqs6Ag7J6I642YIOybuSDrs7TslYgg6riw7Iig7JeQIOuMgO2VtCDqs7XsnKDtlZjsmIDsirXri4jri6QuIOyKpO2EsOuUlOulvCDrqocg7LCo66GAIOynhO2Wie2VmOuptOyEnCDshJzroZzrpbwg7Ya17ZW0IOuwsOyasOuKlCDsoJDsnbQg66eO7JWY6rOgIOyEnOuhnOyXkOqyjCDquI3soJXsoIHsnbgg7J6Q6re57J20IOuQmOyXiOyKteuLiOuLpC4g6re4656Y7IScIOyDiOuhnOyatCDso7zsoJzrpbwg7KCV7ZW0IOyKpO2EsOuUlOulvCDqs4Tsho0g7KeE7ZaJ7ZWY7J6Q64qUIOydmOqyrOydtCDrqqjsmIDqs6AgUHl0aG9uIOqwmeydgCDsg4jroZzsmrQg7ZSE66Gc6re4656Y67CNIOyWuOyWtOuPhCDtlbTri7kg7Iqk7YSw65SU66W8IOynhO2Wie2VmOuptOyEnCDrsLDsm4zrgpjqsJTsirXri4jri6QuIOydtOyymOufvCDri6Trpbgg67aE7JW87JeQ7IScIOyghOusuOyEseydhCDqsIDsp4Qg64+Z66OM7JmAIO2VqOq7mCDsiqTthLDrlJTrpbwg7KeE7ZaJ7ZWY66m07IScIOydtOyghOyXkCDslYzsp4Ag66q77ZaI642YIOyngOyLneydhCDsjJPsnYQg7IiYIOyeiOyXiOyKteuLiOuLpC4g7KCA64qUIFNL7ZWY7J2064uJ7Iqk7JeQ7ISc64+EIO2YvOyekO2VmOuKlCDqsoPsnbQg7JWE64uMIOuPmeujjOuTpOqzvCDtlajqu5gg7ZWY66m07IScIOyjvOyWtOynhCDqs7zsoJzrpbwg7ZW06rKw7ZWY6rOgIO2VqOq7mCDshLHsnqXtlZjrqbAgU0vtlZjsnbTri4nsiqTsnZgg67mE7KCE7J2EIO2Wpe2VtCDrgpjqsIDqs6Ag7Iu27Iq164uI64ukLjwvdGV4dGFyZWE+PC90ZD4KDQogICA8L3RyPgoNCiAgICAgICAgICAgPC90Ym9keT4KDQogICAgICAgPC90YWJsZT4KDQpkZA==" />
+</div>
+
+<script type="text/javascript" src="/ajax/common.ashx"></script><script type="text/javascript" src="/ajax/SK.GTM.ApplicationFramework.Helpers.AjaxHelper,SK.GTM.ApplicationFramework.ashx"></script><script language="javascript">
+function Skcc_CanSelect() { return true; }
+function Skcc_CanUpdate() { return true; }
+function Skcc_CanInsert() { return true; }
+function Skcc_CanDelete() { return true; }
+</script>
+
+        <!-- wrap -->
+        <div id="wrap" class="survey2">
+            <div class="popup_wrap">
+                <h1>
+                    지원서 조회</h1>
+                <a href="javascript:window.close();" title="지원서조회 창닫기" class="close" onclick="fnDivZipClose();">
+                    <span>X</span></a>
+                <!-- content -->
+                <div id="contents" style="border-top: none">
+                    <h2 class="hidden">
+                        지원서 조회</h2>
+                    <!-- cv -->
+                    <div id="cv" style="background: none !important; padding: 0px;">
+                        <!-- apply -->
+                        <div class="apply">
+                            <!-- elements -->
+                            <div class="elements">
+                                <ul id="ul_trm2221">
+                                    <li>
+                                        <h3 class="mt0">
+                                            희망직무
+                                        </h3>
+                                        <table>
+                                            <caption>
+                                                희망직무 테이블입니다. 지원회사, 희망근무지, 희망직무1, 희망직무2로 구성
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 15%">
+                                                <col style="width: 35%">
+                                                <col style="width: 15%">
+                                                <col style="width: auto">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th id="info31" scope="row">
+                                                        지원회사
+                                                    </th>
+                                                    <td headers="info31">
+                                                        <span>
+                                                            SK 하이닉스
+                                                        </span>
+                                                    </td>
+                                                    <th id="info32" scope="row">
+                                                        희망직무 1 
+                                                    </th>
+                                                    <td headers="info32">
+                                                        <span>
+                                                            IT(자동화)
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th id="info33" scope="row">
+                                                        희망근무지
+                                                    </th>
+                                                    <td headers="info33" >
+                                                        <span>
+                                                            Korea, Republic of - 이천
+                                                        </span>
+                                                    </td>
+                                                    <th id="info34" scope="row" >
+                                                        희망직무 2
+                                                    </th>
+                                                    <td headers="info34" >
+                                                        <span>
+                                                            IT(자동화)
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li>
+                                        <h3>
+                                            개인신상</h3>
+                                        <table>
+                                            <caption>
+                                                개인신상(표)입니다. 이 표는 아이디(이메일), 성명, 영문성명, 한자성명, 국적, 생년월일, 성별, 전화번호, 이동전화번호, 연락가능시간, 주소, 장애여부로 구성 
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 15%" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th scope="row">
+                                                    아이디 (이메일)
+                                                </th>
+                                                <td class="photo_point">
+                                                    <span>
+                                                        sok891111@kaist.ac.kr
+                                                    </span>
+                                                    <div class="personal_photo view" style=";display:none;">
+                                                        <div class="photobox2">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    한글성명
+                                                </th>
+                                                <td>
+                                                    <span>
+                                                        김성진
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr id="tr_ENM_YN">
+	<th scope="row">
+                                                    영문성명
+                                                </th>
+	<td>
+                                                    <span>
+                                                        Sungjin Kim
+                                                    </span>
+                                                </td>
+</tr>
+
+                                            
+                                            
+                                            <tr>
+                                                <th scope="row">
+                                                    국적
+                                                </th>
+                                                <td>
+                                                    <span>
+                                                        Korea, Republic of
+                                                    </span>
+                                                </td>
+                                            </tr>                                            
+                                            <tr>
+                                                <th scope="row">
+                                                    생년월일
+                                                </th>
+                                                <td>
+                                                    <span>
+                                                        1989-11-11
+                                                    </span>
+                                                </td>
+                                            </tr>                                           
+                                            <tr id="tr_Gender_YN">
+	<th scope="row">
+                                                    성별
+                                                </th>
+	<td class="sex">
+                                                    <span>
+                                                        남
+                                                    </span>
+                                                </td>
+</tr>
+
+                                            <tr id="tr_Choice_TEL_YN">
+	<th scope="row">
+                                                    전화번호
+                                                </th>
+	<td>
+                                                    <span>
+                                                        
+                                                    </span>
+                                                </td>
+</tr>
+
+                                            <tr id="tr_Cell_TEL_YN">
+	<th scope="row">
+                                                    이동전화번호
+                                                </th>
+	<td>
+                                                    <span>
+                                                        01025212746
+                                                    </span>
+                                                </td>
+</tr>
+
+                                            <tr>
+                                                <th scope="row">
+                                                    연락가능시간
+                                                </th>
+                                                <td>
+                                                    <span>
+                                                          
+                                                        ~
+                                                          
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    주소
+                                                </th>
+                                                <td>
+                                                    <span>
+                                                        08772
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    &nbsp;
+                                                </th>
+                                                <td>
+                                                    <span>
+                                                        서울특별시 관악구 난곡로64길 53 에버하우스
+                                                        204호
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            
+                                            
+                                            <tr id="tr_Email_YN">
+	<th scope="row">
+                                                    이메일<br />
+                                                    (ID와 다른경우)
+                                                </th>
+	<td>
+                                                    <span>
+                                                        sok891111@kaist.ac.kr
+                                                    </span>
+                                                </td>
+</tr>
+
+                                            <!-- 수정 130801 장애여부 추가 : Start -->
+                                            
+                                            <!-- 수정 130801 장애여부 추가 : End -->
+                                        </table>
+                                    </li>
+                                    <li id="li_MilSrv_Disability_YN">
+                                        <h3>
+                                            병역정보 및 보훈대상여부</h3>
+                                        <table>
+                                            <caption>
+                                                병역정보 및 보훈대상여부(표)입니다. 이 표는 군필 여부, 면제여부, 미필여부, 보훈대상여부로 구성
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 15%">
+                                                <col style="width: auto">
+                                            </colgroup>
+                                            <tr id="tr_MilSrv_YN_1">
+	<th scope="row" rowspan="2">
+                                                    군필&nbsp;
+                                                    <div class="checkbox2">
+                                                        <input value="rdoMilSrv_Echelon_TP1" name="MilSrv_Echelon_TP" type="radio" id="rdoMilSrv_Echelon_TP1" title="군필" disabled="disabled" checked="checked" /></div>
+                                                </th>
+	<td>
+                                                    <span>
+                                                        2008-12
+                                                        ~
+                                                        2010-10
+                                                    </span>
+                                                </td>
+</tr>
+
+                                            <tr id="tr_MilSrv_YN_2">
+	<td class="second ">
+                                                    <ul class="military">
+                                                        <li>
+                                                            <p class="sub_title">
+                                                                병역구분
+                                                                :
+                                                                현역병
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="sub_title">
+                                                                군별
+                                                                :
+                                                                육군
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="sub_title">
+                                                                계급
+                                                                :
+                                                                병장
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+</tr>
+
+                                            <tr id="tr_MilSrv_YN_3">
+	<th scope="row">
+                                                    면제&nbsp;
+                                                    <div class="checkbox3">
+                                                        <input value="rdoMilSrv_Echelon_TP2" name="MilSrv_Echelon_TP" type="radio" id="rdoMilSrv_Echelon_TP2" title="면제" disabled="disabled" /></div>
+                                                </th>
+	<td>
+                                                    <span>
+                                                        
+                                                    </span>
+                                                </td>
+</tr>
+
+                                            <tr id="tr_MilSrv_YN_4">
+	<th scope="row">
+                                                    미필
+                                                </th>
+	<td>
+                                                    <span>
+                                                        
+                                                    </span>
+                                                </td>
+</tr>
+
+                                            <tr id="tr_Disability_YN">
+	<th scope="row">
+                                                    보훈대상여부
+                                                </th>
+	<td>
+                                                    <span>
+                                                        
+                                                    </span>
+                                                </td>
+</tr>
+
+                                        </table>
+                                    </li>
+                                    
+                                    <li id="li_WriExmSel_YN" class="last">
+                                        <h3>
+                                            필기전형 선택사항</h3>
+                                        <table>
+                                            <caption>
+                                                필기전형 선택사항(표)입니다. 이 표는 필기전형 언어 선택, 장애여부로 구성
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 15%">
+                                                <col style="width: auto">
+                                            </colgroup>
+                                            <tr id="tr_WriExmSel">
+	<th scope="row">
+                                                    필기전형 언어 선택
+                                                </th>
+	<td>
+                                                    <span>
+                                                        한국어
+                                                    </span>
+                                                </td>
+</tr>
+
+                                            <tr id="tr_WriExmArea">
+	<th scope="row">
+                                                    필기전형 장소 선택
+                                                </th>
+	<td>
+                                                    <span>
+                                                        뉴욕
+                                                    </span>
+                                                </td>
+</tr>
+
+                                            <tr id="tr_WriExmDis">
+	<th scope="row">
+                                                    장애여부&nbsp;
+                                                    <div class="checkbox2">
+                                                        <input name="chkWriExmDis_YN" type="checkbox" id="chkWriExmDis_YN" title="장애여부" disabled="disabled" /></div>
+                                                </th>
+	<td>
+                                                    <span>
+                                                        장애유형 : 
+                                                        
+                                                        / 장애등급 : 
+                                                         &nbsp; &nbsp; &nbsp;
+                                                        장애유형 : 
+                                                        
+                                                        / 장애등급 : 
+                                                        
+
+                                                       <br /> 필기전형 시 지원 필요 사항 입력 : 
+                                                        
+
+                                                    </span>
+                                                </td>
+</tr>
+
+                                        </table>
+                                    </li>
+                                </ul>
+                                <ul id="ul_trm2223">
+                                    <li id="li_Sch_YN">
+                                        <h3>
+                                            기본정보</h3>
+                                        <table>
+                                            <caption>
+                                                기본정보 입력 테이블입니다. 학위, 졸업상태, 입학년월, 졸업년월, 학교, 전공, 부전공, 복수전공, 학점, 편입여부로 구성
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 15%">
+                                                <col style="width: 35%">
+                                                <col style="width: 15%">
+                                                <col style="width: auto">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+    <th id="info41" scope="row">학위</th>
+    <td headers='info41'> <span>학사</span></td>
+    <th id="info42" scope="row">졸업상태</th>
+    <td headers='info42'> <span>졸업(졸업예정) [최종학력]</span></td>
+</tr>
+<tr>
+    <th id="info43" scope="row">입학년월</th>
+    <td headers='info43'> <span>2008-03</span></td>
+    <th id="info44" scope="row">졸업년월</th>
+    <td headers='info44'> <span>2014-02</span></td>
+</tr>
+<tr>
+    <th id="info45" scope="row">학교</th>
+    <td headers='info45'> <span>한국과학기술원</span></td>
+    <th id="info46" scope="row">전공</th>
+    <td headers='info46'> <span>기술경영학과</span></td>
+</tr>
+<tr>
+    <th id="info47" scope="row">부전공</th>
+    <td headers='info47'> <span></span></td>
+    <th id="info48" scope="row">복수전공</th>
+    <td headers='info48'> <span></span></td>
+</tr>
+<tr>
+    <th id="info49" scope="row">학점</th>
+    <td headers='info49'> <span>3.24 / 4.30 만점</span></td>
+    <th id="info40" scope="row">편입여부</th>
+    <td headers='info40'> <span>아니오</span></td>
+</tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+
+                                    
+
+                                    <li id="li_GPA_YN">
+                                        <h3>
+        
+        전공학점
+           
+                                        </h3>
+                                        <table>
+                                            <caption>
+                                                전공학점 입력 테이블입니다. 이 글쓰기는 학사, 석사, 박사, 석사통합으로 구성
+                                            </caption>
+                                            <colgroup>
+                                            <col style="width:20%;" />
+                                            <col style="width:20%;" />
+                                            <col style="width:20%;" />
+                                            <col style="width:20%;" />
+                                            <col style="width:20%;" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr >
+                                                    <th style="text-align:center" scope="col">구분</th>
+                                                    <th style="text-align:center" scope="col">학사</th>
+                                                    <th scope="col" style="display:; text-align:center;">석사</th>
+                                                    <th scope="col" style="display:; text-align:center;">박사</th>
+                                                    <th scope="col" style="display:; text-align:center;">석박통합</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+            
+                <tr align="center">
+                    <td><span id="rptGPA_ctl00_ltlGrade">이수 전공학점</span><input type="hidden" name="rptGPA$ctl00$Grade" id="rptGPA_ctl00_Grade" value="0" /></td>
+                    <td>87  <span id="rptGPA_ctl00_lblSP1"></span>  </td>
+                    <td style="display:;"> <span id="rptGPA_ctl00_lblSP2"></span>  </td>
+                    <td style="display:;">  <span id="rptGPA_ctl00_lblSP3"></span>  </td>
+                    <td style="display:;"> <span id="rptGPA_ctl00_lblSP4"></span>  </td>
+                </tr>
+                
+                <tr align="center">
+                    <td><span id="rptGPA_ctl01_ltlGrade">평균 전공학점</span><input type="hidden" name="rptGPA$ctl01$Grade" id="rptGPA_ctl01_Grade" value="1" /></td>
+                    <td>3.20  <span id="rptGPA_ctl01_lblSP1">/</span>  4.30</td>
+                    <td style="display:;"> <span id="rptGPA_ctl01_lblSP2">/</span>  4.00</td>
+                    <td style="display:;">  <span id="rptGPA_ctl01_lblSP3">/</span>  4.00</td>
+                    <td style="display:;"> <span id="rptGPA_ctl01_lblSP4">/</span>  4.00</td>
+                </tr>
+                
+                                            </tbody>
+                                        </table>
+                                    </li>
+
+                                    <li id="li_Study_YN">
+                                        <h3>
+                                           연구분야소개</h3>
+                                        <table>
+                                            <caption>
+                                                연구분야소개 입력 테이블입니다. 소속연구실 소개, 주요 연구주제, 주요성과로 구성
+                                            </caption>
+                                            <colgroup>
+                                            <col style="width:15%;" />
+                                            <col style="width:15%;" />
+                                            <col style="width:auto;" />
+                                            </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row" rowspan="4">소속연구실 소개</th>
+                        <th scope="row">실험실名</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="border-left:1px solid #e6e6e6;">지도교수</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="border-left:1px solid #e6e6e6;">주요 연구분야</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="border-left:1px solid #e6e6e6;">학위논문명</th>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" rowspan="2">주요 연구주제</th>
+                        <th scope="row" style="border-left:1px solid #e6e6e6;">연구 주제</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="border-left:1px solid #e6e6e6;">연구 내용 요약</th>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" rowspan="3">주요성과</th>
+                        <th scope="row" style="border-left:1px solid #e6e6e6;">SCI 저널 논문</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="border-left:1px solid #e6e6e6;">IEEE (국제전기전자공학회) 주관 해외 학회 논문</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="border-left:1px solid #e6e6e6;">기타 해외 학회 논문</th>
+                        <td></td>
+                    </tr>
+                </tbody>
+                                        </table>
+                                    </li>
+
+                                    <li id="li_Patent_YN">
+                                        <h3>
+                                           특허</h3>
+                                        <table>
+                                            <caption>
+                                                특허명 입력 테이블입니다. 특허명, 특허번호, 최종처분으로 구성
+                                            </caption>
+                                            <colgroup>
+                                            <col style="width:47%;" />
+                                            <col style="width:15%;" />
+                                            <col style="width:12%;" />
+                                            <col style="width:26%;" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">특허명</th>
+                                                    <th scope="col">특허번호</th>
+                                                    <th scope="col">최종처분</th>
+                                                    <th scope="col">특허증서</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+            
+                                            </tbody>
+                                        </table>
+                                    </li>
+
+                                    
+                                    
+                                </ul>
+                                
+                                
+                                
+                                <ul id="ul_trm2226">
+                                    <li>
+                                               <h3>자기소개서</h3>
+       <table >
+
+       <caption> 자기소개서1 테이블입니다.<b>1 . 자발적으로 최고 수준의 목표를 세우고 끈질기게 성취한 경험에 대해 서술해 주십시오.</b><br>   1) 먼저, 관련 대표 경험 2가지를 간략하게 작성해 주십시오. (각 50자 이내)<br>   - 언제, 어디서, 어떤 일을 수행했던 경험인지 간략하게 기술할 것 로 구성</caption>
+
+           <tbody>
+
+           <tr>
+
+           <th scope="col"><b>1 . 자발적으로 최고 수준의 목표를 세우고 끈질기게 성취한 경험에 대해 서술해 주십시오.</b><br>&nbsp; &nbsp;1) 먼저, 관련 대표 경험 2가지를 간략하게 작성해 주십시오. (각 50자 이내)<br>&nbsp; &nbsp;- 언제, 어디서, 어떤 일을 수행했던 경험인지 간략하게 기술할 것</th>
+       </tr>
+
+       <tr>
+
+       <td>&nbsp; &nbsp; &nbsp; <font size=3>①</font>&nbsp;2016년 가을, 1인 개발자로 오평이라는 서비스를 준비했던 경험</textarea></td>
+
+   </tr>
+
+           </tbody>
+
+       </table>
+
+       <table  style='border:0; padding:0 0 0 0;'>
+
+       <caption> 자기소개서2 테이블입니다. 로 구성</caption>
+
+           <tbody>
+
+           <tr>
+
+       </tr>
+
+       <tr>
+
+       <td>&nbsp; &nbsp; &nbsp; <font size=3>②</font>&nbsp;2014년, SI회사를 다니며 첫 프로젝트를 진행하였던 경험</textarea></td>
+
+   </tr>
+
+           </tbody>
+
+       </table>
+
+       <table  style='border:0; padding:0 0 0 0;'>
+
+       <caption> 자기소개서3 테이블입니다.   2) 위에 작성한 2가지 경험 중 1개를 골라 좀 더 상세하게 작성해 주십시오.<br>    - 본인이 설정한 목표/ 목표의 수립 과정/ 처음에 생각했던 목표 달성 가능성/ 수행 과정에서 부딪힌 장애물 및 그 때의 감정(생각)/ 목표 달성을 위한 구체적 노력/ 실제 결과/ 경험의 진실성을 증명할 수 있는 근거가 잘 드러나도록 기술 로 구성</caption>
+
+           <tbody>
+
+           <tr>
+
+           <th scope="col">&nbsp; &nbsp;2) 위에 작성한 2가지 경험 중 1개를 골라 좀 더 상세하게 작성해 주십시오.<br> &nbsp; &nbsp;- 본인이 설정한 목표/ 목표의 수립 과정/ 처음에 생각했던 목표 달성 가능성/ 수행 과정에서 부딪힌 장애물 및 그 때의 감정(생각)/ 목표 달성을 위한 구체적 노력/ 실제 결과/ 경험의 진실성을 증명할 수 있는 근거가 잘 드러나도록 기술</th>
+       </tr>
+
+       <tr>
+
+       <td><textarea title="자기소개서" style="width:100%; height:100px; border:0;" id="txtEssay2" readonly >"오평"
+1년 정도 홍콩에서 생활하며 다양한 홍콩 친구들을 만날 기회가 있습니다. 그때마다 친구들이 한국의 화장품이나 패션에 대해 관심을 가지고 있었고 트렌디한 상품에 대해 저에게 물어보았습니다. 그런데 저는 트렌드에 대해 무관심했기 때문에 어떤 명확한 대답을 할 수 없음이 답답했습니다. 이런 답답함을 해결하기 위해 `한류의 트렌드를 데이터로 보여줄 수 있으면 좋겠다`라는 생각을 가지게 되었습니다. 그래서 한국으로 귀국 후에 홍콩에서의 경험을 바탕으로 역직구 트렌드를 리딩하는 쇼핑 플랫폼이라는 목표를 가지고 1인 개발자로 오평이라는 서비스를 시작하게 되었습니다.
+1인 개발자였기 때문에 기획부터 개발까지 도맡아 진행해야 했는데 가장 힘들었던 점은 고객에 대한 이해였습니다. 고객이 원하는 데이터는 어떤 것인지 그리고 고객들이 불편함을 느끼지 않고 자연스러운 UI면서 기존의 쇼핑몰과 차별화된 UI는 어떻게 만들어야 하는지 등 고객에 대한 수많은 고민을 하였지만 혼자 결론 낼 수 없었습니다. 그래서 친구들을 만나며 오평 서비스의 비전과 목표에 대해 설명하고 시연하면서 실제 테스트를 요청하여 피드백을 얻어갔습니다. 그러나 서비스 초기 부정적인 피드백이 쌓여가면서 자신감을 잃어갔습니다. 그러나 포기하지 않고 피드백에 대한 피드백을 받기 위해 밤새 개발작업을 진행해서 다음날 다시 피드백을 받기도 하며 오평 서비스를 키워나갔습니다. 그 결과 오평（www.opyeung.com）이라는 서비스를 완성 할 수 있었고 서비스를 홍콩 친구들에게 소개 할 수 있었습니다. 
+저는 비전과 기술 그리고 끈기가 있었기에 오평이란 서비스를 완성 할 수 있었다고 생각합니다. SK하이닉스에서도 기술중심 그리고 패기와 끈기 있는 신입사원으로 SK하이닉스와 꼭 함께 하고 싶습니다.</textarea></td>
+
+   </tr>
+
+           </tbody>
+
+       </table>
+
+       <table >
+
+       <caption> 자기소개서4 테이블입니다.<b>2. 새로운 것을 접목하거나 남다른 아이디어를 통해 문제를 개선했던 경험에 대해 서술해 주십시오.</b><br>   1) 먼저, 관련 대표 경험 2가지를 간략하게 작성해 주십시오. (각 50자 이내)<br>   - 언제, 어디서, 어떤 일을 수행했던 경험인지 간략하게 기술할 것 로 구성</caption>
+
+           <tbody>
+
+           <tr>
+
+           <th scope="col"><b>2. 새로운 것을 접목하거나 남다른 아이디어를 통해 문제를 개선했던 경험에 대해 서술해 주십시오.</b><br>&nbsp; &nbsp;1) 먼저, 관련 대표 경험 2가지를 간략하게 작성해 주십시오. (각 50자 이내)<br>&nbsp; &nbsp;- 언제, 어디서, 어떤 일을 수행했던 경험인지 간략하게 기술할 것</th>
+       </tr>
+
+       <tr>
+
+       <td>&nbsp; &nbsp; &nbsp; <font size=3>①</font>&nbsp;SNS에서의 들었던 친구의 고민을 프로그램을 만들어 해결해주었던 경험</textarea></td>
+
+   </tr>
+
+           </tbody>
+
+       </table>
+
+       <table  style='border:0; padding:0 0 0 0;'>
+
+       <caption> 자기소개서5 테이블입니다. 로 구성</caption>
+
+           <tbody>
+
+           <tr>
+
+       </tr>
+
+       <tr>
+
+       <td>&nbsp; &nbsp; &nbsp; <font size=3>②</font>&nbsp;홍콩 로컬 회사에서 한국 기업에서 배운 지식을 활용했던 경험</textarea></td>
+
+   </tr>
+
+           </tbody>
+
+       </table>
+
+       <table  style='border:0; padding:0 0 0 0;'>
+
+       <caption> 자기소개서6 테이블입니다.   2) 위에 작성한 2가지 경험 중 1개를 골라 좀 더 상세하게 작성해 주십시오.<br>   - 기존 방식과 본인이 시도한 방식의 차이/ 새로운 시도를 하게 된 계기/ 새로운 시도를 했을 때의 주변 반응/ 새로운 시도를 위해 감수해야 했던 점/ 구체적인 실행 과정 및 결과/ 경험의 진실성을 증명할 수 있는 근거가 잘 드러나도록 기술 로 구성</caption>
+
+           <tbody>
+
+           <tr>
+
+           <th scope="col">&nbsp; &nbsp;2) 위에 작성한 2가지 경험 중 1개를 골라 좀 더 상세하게 작성해 주십시오.<br>&nbsp; &nbsp;- 기존 방식과 본인이 시도한 방식의 차이/ 새로운 시도를 하게 된 계기/ 새로운 시도를 했을 때의 주변 반응/ 새로운 시도를 위해 감수해야 했던 점/ 구체적인 실행 과정 및 결과/ 경험의 진실성을 증명할 수 있는 근거가 잘 드러나도록 기술</th>
+       </tr>
+
+       <tr>
+
+       <td><textarea title="자기소개서" style="width:100%; height:100px; border:0;" id="txtEssay5" readonly >"이미지 처리 프로그램"
+메신져에서 친구들과 대화하던 중 야근 중인 친구의 고충을 우연히 듣게 되었습니다. 100개의 이미지가 있는데 동일한 크기로 편집 해야한다는 것이였습니다. 이를 위해 친구는 MS Office 를 이용해서 이미지를 하나씩 불러와 이미지를 리사이징 하고 있는데 너무 지겹다는 친구의 하소연이였습니다. 친구에게 프로그램을 사용할 것을 제안했지만 해당작업을 위한 마땅한 프로그램이 없고 프로그램을 찾아 설치하고 배우는 시간보다 하나씩하는게 더 빠르다는 생각으로 그 친구는 야근을 하고 있었습니다. 친구는 그냥 빨리 하면 되기 때문에 프로그램은 필요없다고 계속 주장하였지만 저는 반복적인 작업은 프로그램을 통해 자동화 하는것이 효율적이기 때문에 프로그램이 없다면 프로그램을 만들어 친구의 퇴근을 도와야겠다고 생각하고 행동했습니다.  
+그래서 퇴근 후 저녁시간을 활용해서 Python을 이용해 친구만을 위한 이미지 편집 프로그램을 만들어 제공하였습니다. 사실 제가 프로그램을 완성했을 쯤에는 친구가 대부분의 이미지 작업을 마친 후였습니다. 그럼에도 친구에게 남은 이미지는 제가 만든 프로그램을 이용해 작업해보라고 조언했고 그 결과 친구는 남은 작업을 마무리하고 퇴근 할 수 있었습니다. 친구에게서 어떤 보상도 받지 못했지만 몇일 뒤 똑같은 일을 다시 해야했던 친구에게서 "프로그램을 만들어줘서 오늘 일찍 퇴근 할 수 있을것 같다. 고맙다" 라는 메세지를 받았을 때 어떤 금전적인 보상보다 가치있는 보람을 느낄 수 있었습니다. 
+SK하이닉스에서도 제가 맡은 업무를 진행하면서 또는 선배/동료들과 함께 일하면서 새로운 시도를 통해 더 효율적으로 업무를 개선할 수 있다면 시도해서 보람을 느끼고 SK하이닉스의 성장에 도움을 주는 역활을 하고 싶습니다.</textarea></td>
+
+   </tr>
+
+           </tbody>
+
+       </table>
+
+       <table >
+
+       <caption> 자기소개서7 테이블입니다.<b>3. 지원 분야와 관련하여 특정 영역의 전문성을 키우기 위해 꾸준히 노력한 경험에 대해 서술해 주십시오.</b><br>    - 전문성의 구체적 영역(예. 통계분석)/ 전문성을 높이기 위한 학습 과정/ 전문성 획득을 위해 투입한 시간 및 방법/ 습득한 지식 및 기술을 실전적으로 적용해 본 사례/ 전문성을 객관적으로 확인한 경험/ 전문성 향상을 위해 교류하고 있는 네트워크/ 경험의 진실성을 증명할 수 있는 근거가 잘 드러나도록 기술 로 구성</caption>
+
+           <tbody>
+
+           <tr>
+
+           <th scope="col"><b>3. 지원 분야와 관련하여 특정 영역의 전문성을 키우기 위해 꾸준히 노력한 경험에 대해 서술해 주십시오.</b><br>&nbsp; &nbsp; - 전문성의 구체적 영역(예. 통계분석)/ 전문성을 높이기 위한 학습 과정/ 전문성 획득을 위해 투입한 시간 및 방법/ 습득한 지식 및 기술을 실전적으로 적용해 본 사례/ 전문성을 객관적으로 확인한 경험/ 전문성 향상을 위해 교류하고 있는 네트워크/ 경험의 진실성을 증명할 수 있는 근거가 잘 드러나도록 기술</th>
+       </tr>
+
+       <tr>
+
+       <td><textarea title="자기소개서" style="width:100%; height:100px; border:0;" id="txtEssay6" readonly >대학 시절 Java 같은 전산 관련 수업을 들으면서 IT에 대한 관심을 키워나갔습니다. 학과 수업이 아닌 현업에서 IT를 경험해보고 싶어 방학을 활용해 IBM과 LG CNS에서 인턴을 진행하였고 졸업 후에는 LG CNS에서 첫 커리어를 시작했습니다. 2년 조금 넘는 시간동안 LG 자매사의 ERP 고도화나 영업포털 같은 SI프로젝트를 진행하며 저의 IT역량을 성장시켜 나갔습니다. 단순히 개발 역량의 성장만이 아닌 업무를 이해하고 사용자들을 이해 할 수 있는 역량을 키워나갔다고 생각합니다. 
+그 중 엘지화학 ERP프로젝트는 가장 기억에 남는 프로젝트인 것 같습니다. 오래전에 개발된 ERP 시스템을 사용중인 사용자들은 불편한 UI와 원하는 데이터가 ERP 내에 정리 되어 있지 않았기 때문에 ERP에서 데이터를 내려받아 다시 액셀에서 정리하는 작업을 통해 업무를 진행하고 있었습니다. 이런 문제를 해결하기 위해 배치프로그램을 만들어 ERP에서 데이터를 받아 DB에 저장하고 웹 기술을 활용해 사용자들이 원하는 데이터를 그래프로 시각화 하였습니다. 그 결과 사용자들은 추가적인 엑셀 작업을 할 필요가 없어졌고 웹을 통해 팀원들간 데이터를 공유 할 수 있어 원활한 커뮤니션이 진행 되었다는 피드백을 사용자들로부터 받았을 수 있었습니다.
+이렇게 다양한 IT프로젝트를 진행하며 사용자들과 만나 그들의 업무를 이해하고 그들이 가지고 있던 어려움을 IT기술로 해결해 나갔습니다. 그 결과 요구사항 분석이나 애자일 방법론 같은 프로젝트 관리 측면뿐만이나리 Oracle, MS-SQL 같은 DB 설계, 구축이나 Java어플리케이션 개발측면까지 저의 역량을 키울 수 있었습니다. SK 하이닉스에서 그리고 제가 지원한 IT팀에서 일하기 위해 저는 지난 시간 저만의 전문성을 키워왔습니다. 그리고 이제 그 역량을 바탕으로 저와 SK하이닉스이 함께 성장 할 수 있는 시간들을 만들어 나가고 싶습니다.</textarea></td>
+
+   </tr>
+
+           </tbody>
+
+       </table>
+
+       <table >
+
+       <caption> 자기소개서8 테이블입니다.<b>4. 혼자 하기 어려운 일에서 다양한 자원 활용, 타인의 협력을 최대한으로 이끌어 내며, Teamwork을 발휘하여 공동의 목표 달성에 기여한 경험에 대해 서술해 주십시오.</b><br>   1) 먼저, 관련 대표 경험 2가지를 간략하게 작성해 주십시오. (각 50자 이내)<br>   - 언제, 어디서, 어떤 일을 수행했던 경험인지 간략하게 기술할 것 로 구성</caption>
+
+           <tbody>
+
+           <tr>
+
+           <th scope="col"><b>4. 혼자 하기 어려운 일에서 다양한 자원 활용, 타인의 협력을 최대한으로 이끌어 내며, Teamwork을 발휘하여 공동의 목표 달성에 기여한 경험에 대해 서술해 주십시오.</b><br>&nbsp; &nbsp;1) 먼저, 관련 대표 경험 2가지를 간략하게 작성해 주십시오. (각 50자 이내)<br>&nbsp; &nbsp;- 언제, 어디서, 어떤 일을 수행했던 경험인지 간략하게 기술할 것</th>
+       </tr>
+
+       <tr>
+
+       <td>&nbsp; &nbsp; &nbsp; <font size=3>①</font>&nbsp;보안팀 동기와 기술 스터디를 진행하였던 경험</textarea></td>
+
+   </tr>
+
+           </tbody>
+
+       </table>
+
+       <table  style='border:0; padding:0 0 0 0;'>
+
+       <caption> 자기소개서9 테이블입니다. 로 구성</caption>
+
+           <tbody>
+
+           <tr>
+
+       </tr>
+
+       <tr>
+
+       <td>&nbsp; &nbsp; &nbsp; <font size=3>②</font>&nbsp;대학 시절 공모전에 도전하면서 대전 정부청사를 방문했던 경험</textarea></td>
+
+   </tr>
+
+           </tbody>
+
+       </table>
+
+       <table  style='border:0; padding:0 0 0 0;'>
+
+       <caption> 자기소개서10 테이블입니다.   2) 위에 작성한 2가지 경험 중 1개를 골라 좀 더 상세하게 작성해 주십시오.<br>   - 관련된 사람들의 관계(예. 친구, 직장 동료) 및 역할/ 혼자 하기 어렵다고 판단한 이유/ 목표 설정 과정/ 자원(예. 사람, 자료 등) 활용 계획 및 행동/ 구성원들의 참여도 및 의견 차이/ 그에 대한 대응 및 협조를 이끌어 내기 위한 구체적 행동/ 목표 달성 정도 및 본인의 기여도/ 경험의 진실성을 증명할 수 있는 근거가 잘 드러나도록 기술 로 구성</caption>
+
+           <tbody>
+
+           <tr>
+
+           <th scope="col">&nbsp; &nbsp;2) 위에 작성한 2가지 경험 중 1개를 골라 좀 더 상세하게 작성해 주십시오.<br>&nbsp; &nbsp;- 관련된 사람들의 관계(예. 친구, 직장 동료) 및 역할/ 혼자 하기 어렵다고 판단한 이유/ 목표 설정 과정/ 자원(예. 사람, 자료 등) 활용 계획 및 행동/ 구성원들의 참여도 및 의견 차이/ 그에 대한 대응 및 협조를 이끌어 내기 위한 구체적 행동/ 목표 달성 정도 및 본인의 기여도/ 경험의 진실성을 증명할 수 있는 근거가 잘 드러나도록 기술</th>
+       </tr>
+
+       <tr>
+
+       <td><textarea title="자기소개서" style="width:100%; height:100px; border:0;" id="txtEssay9" readonly >"기술 스터디"
+지난 회사에서 웹개발 팀에서 근무하면서 웹과 관련된 기술과 프로젝트를 경험하며 저의 역량을 쌓을 수 있었습니다. 그러나, 웹 개발 역량이 아닌 다른 IT기술에 대해서도 호기심이 생겨 보안팀에서 근무하던 친한 동기에게 기술 스터디를 제안했습니다. 때마침 그 친구도 보안 업무를 위해 웹에 대한 이해와 역량을 쌓을 필요성을 느끼고 있었기에 자연스럽게 서로의 경험과 지식을 공유 할 수 있는 자리가 만들어졌습니다. 주말마다 모처에 모여 친구로부터 보안과 관련된 해킹 기술이라든지 보안 트렌드에 대해 듣고 실제로 쇼단이라는 플랫폼을 활용해 모의 해킹을 진행해보기도 하였습니다. 저는 웹 개발 프로세스에 대해 설명하면서 개발자들이 어느 정도 보안에 대한 조치를 하면서 개발을 진행하는지와 제가 알고 있던 웹 보안 기술에 대해 공유하였습니다. 스터디를 몇 차례 진행하면서 서로를 통해 배우는 점이 많았고 서로에게 긍정적인 자극이 되었습니다. 그래서 새로운 주제를 정해 스터디를 계속 진행하자는 의견이 모였고 Python 같은 새로운 프로그래밍 언어도 해당 스터디를 진행하면서 배워나갔습니다. 이처럼 다른 분야에서 전문성을 가진 동료와 함께 스터디를 진행하면서 이전에 알지 못했던 지식을 쌓을 수 있었습니다. 저는 SK하이닉스에서도 혼자하는 것이 아닌 동료들과 함께 하면서 주어진 과제를 해결하고 함께 성장하며 SK하이닉스의 비전을 향해 나가고 싶습니다.</textarea></td>
+
+   </tr>
+
+           </tbody>
+
+       </table>
+
+
+                                    </li>
+                                </ul>
+                                <ul id="ul_PF2">
+                                    <li>
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- elements end-->
+                        </div>
+                        <!-- apply end -->
+                    </div>
+                    <!-- cv end -->
+                </div>
+                <!-- content end -->
+            </div>
+        </div>
+        <!-- wrap end-->
+        
+<script language="Javascript">
+</script>
+</form>
+</body>
+</html>

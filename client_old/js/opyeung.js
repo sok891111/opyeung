@@ -1,10 +1,10 @@
 var $card , $card_slick , $proudcts , $proudcts_copy , $animating;
 var $card_info = [];
 var $count = 0;
-var $server_url = 'http://34.82.59.94:8888/';
+var $server_url = 'http://mukgee.com:8888';
 $(document).ready(function() {
 
-	$card = $('.feed')
+	$card = $('.card-list')
 	$card_slick = $card.slick({
 		arrows : false,
 		cssEase : 'easeOutElastic',
@@ -62,7 +62,7 @@ $(document).ready(function() {
 });
 
 function init(){
-	$('.feed').slick('slickGoTo', 1);	
+	$('.card-list').slick('slickGoTo', 1);	
 	$.ajax({
 		url:$server_url,
 		dataType:'json',
@@ -89,11 +89,10 @@ function setProductInfo(selector , is_main){
 	if(!product) return;
 	$(selector).find('img').eq(0).attr('src' , product.SITE_ICON);
 	$(selector).find('img').eq(1).attr('src' , !product.PRODUCT_IMG.startsWith('http') ? 'http:' + product.PRODUCT_IMG : product.PRODUCT_IMG);
-	$(selector).find('span').eq(0).text( product.SITE_NM);
-	$(selector).find('.photo__comment-author').eq(0).text( product.SITE_NM);
-	$(selector).find('span').eq(1).text( product.PRODUCT_NM);
-	// $(selector).find('p').eq(2).text( (product.DISCOUNT_PRICE ? product.DISCOUNT_PRICE : product.PRICE) + "원" );
-	$(selector).find('.photo__comment-description').text( product.PRODUCT_DESC);
+	$(selector).find('p').eq(0).text( product.SITE_NM);
+	$(selector).find('p').eq(1).text( product.PRODUCT_NM);
+	$(selector).find('p').eq(2).text( (product.DISCOUNT_PRICE ? product.DISCOUNT_PRICE : product.PRICE) + "원" );
+	$(selector).find('.row').eq(3).text( product.PRODUCT_DESC);
 }
 
 

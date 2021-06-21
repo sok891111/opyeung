@@ -1,130 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-<title>Opyeung</title>
-
-<!-- Bootstrap -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/slick.css" rel="stylesheet">
-<link href="css/slick-theme.css" rel="stylesheet">
-<link href="css/opyeung.css" rel="stylesheet">
-<!--<link href="css/opyeung.css" rel="stylkesheet">-->
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-<div class="container">
-    <div class="card-list">
-        <div class="card">
-        </div>
-        <div class="card" id="main_card">
-            <div class="row" style="">
-            	<div class="col-xs-3"">
-                	<img width="100%" class="img-circle" src="img/lf3.png">
-                </div>
-                <div class="col-xs-9" style="padding-left:0px;">
-                    <div class="col-xs-12">
-                    <b><p style="margin-bottom:0px;">John Smith</p></b>
+    <head>
+        <meta charset="UTF-8">
+        <title>Feed | Instaclone</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link href="css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link href="css/slick.css" rel="stylesheet">
+        <link href="css/slick-theme.css" rel="stylesheet">
+        <link href="css/opyeung.css" rel="stylesheet">
+    </head> 
+    <body>
+        <nav class="navigation">
+            <a href="feed.html">
+                <img 
+                    src="images/navLogo.png"
+                    alt="logo"
+                    title="logo"
+                    class="navigation__logo"
+                />
+            </a>
+            <!-- <div class="navigation__search-container">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div> -->
+            <div class="navigation__icons">
+                <a href="explore.html" class="navigation__link">
+                    <i class="fa fa-compass"></i>
+                </a>
+                <a href="#" class="navigation__link">
+                    <i class="fa fa-heart-o"></i>
+                </a>
+                <a href="profile.html" class="navigation__link">
+                    <i class="fa fa-user-o"></i>
+                </a>
+            </div>
+        </nav>
+        <main class="feed">
+            <section class="photo">
+            </section>
+            <section class="photo" id ="main_card">
+                <header class="photo__header">
+                    <div class="photo__header-column">
+                        <img
+                            class="photo__avatar"
+                            src="images/avatar.jpg"
+                        />
                     </div>
-                    <div class="col-xs-12">
-                    <p style="margin:0px">Spanish River School</p>
-                    <p style="text-align: right;margin:0px;"></p>
+                    <div class="photo__header-column">
+                        <span class="photo__username">serranoarevalo</span>
+                        <span class="photo__location">European Art of Living Center - Bad Antogast</span>
+                    </div>
+                </header>
+                <div class="photo__file-container">
+                    <img
+                        class="photo__file"
+                        src="images/feedPhoto.jpg"
+                    />
+                </div>
+                <div class="photo__info">
+                    <div class="photo__icons">
+                        <span class="photo__icon">
+                            <i class="fa fa-heart-o heart fa-lg"></i>
+                        </span>
+                        <span class="photo__icon">
+                            <i class="fa fa-comment-o fa-lg"></i>
+                        </span>
+                    </div>
+                    <span class="photo__likes">35 likes</span>
+                    <ul class="photo__comments">
+                        <li class="photo__comment">
+                            <span class="photo__comment-author">serranoarevalo</span><span class="photo__comment-description">wow this is great!</span>
+                        </li>
+                        <li class="photo__comment">
+                            <span class="photo__comment-author">lynn</span>no is not!
+                        </li>
+                    </ul>
+                    <span class="photo__time-ago">11 hours ago</span>
+                    <div class="photo__add-comment-container">
+                        <textarea placeholder="Add a comment..." class="photo__add-comment"></textarea>
+                        <i class="fa fa-ellipsis-h"></i>
                     </div>
                 </div>
-                
-            </div>
-            <div class="row">
-            	<img src="img/lf2.png" width="100%">
-            </div>
-            <div class="row">
-            	<img src="img/feedb.png" width="100%">
-            </div>
-            <div class="row">
-                test    
-            </div>
-        </div>
-        <div class="card">
-        </div>
-    </div>
+            </section>
+            <section class="photo">
+            </section>
+        </main>
 
-
-    <div class="background" id="background_card">
-        <div class="row" style="padding-bottom: 5px;">
-            <div class="col-xs-3">
-                <img width="100%" class="img-circle" src="img/lf3.png">
-            </div>
-            <div class="col-xs-9" style="padding-left:0px;">
-                <div class="col-xs-12">
-                <b><p style="margin-bottom:0px;">John Smith</p></b>
+        <section class="photo" style="display:none;" id="copy_card">
+            <header class="photo__header">
+                <div class="photo__header-column">
+                    <img
+                        class="photo__avatar"
+                        src="images/avatar.jpg"
+                    />
                 </div>
-                <div class="col-xs-12">
-                <p style="margin:0px">Spanish River School</p>
-                <p style="text-align: right;margin:0px;"></p>
+                <div class="photo__header-column">
+                    <span class="photo__username">serranoarevalo</span>
+                    <span class="photo__location">European Art of Living Center - Bad Antogast</span>
+                </div>
+            </header>
+            <div class="photo__file-container">
+                <img
+                    class="photo__file"
+                    src="images/feedPhoto.jpg"
+                />
+            </div>
+            <div class="photo__info">
+                <div class="photo__icons">
+                    <span class="photo__icon">
+                        <i class="fa fa-heart-o heart fa-lg"></i>
+                    </span>
+                    <span class="photo__icon">
+                        <i class="fa fa-comment-o fa-lg"></i>
+                    </span>
+                </div>
+                <span class="photo__likes">35 likes</span>
+                <ul class="photo__comments">
+                    <li class="photo__comment">
+                        <span class="photo__comment-author">serranoarevalo</span><span class="photo__comment-description">wow this is great!</span>
+                    </li>
+                    <li class="photo__comment">
+                        <span class="photo__comment-author">lynn</span>no is not!
+                    </li>
+                </ul>
+                <span class="photo__time-ago">11 hours ago</span>
+                <div class="photo__add-comment-container">
+                    <textarea placeholder="Add a comment..." class="photo__add-comment"></textarea>
+                    <i class="fa fa-ellipsis-h"></i>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <img src="http:////stylenanda.com/web/product/medium/201808/2987daa6233c617105bf4f89ab86632f.jpg" width="100%">
-        </div>
-        <div class="row">
-            <img src="img/feedb.png" width="100%">
-        </div>
-        <div class="row">
-            test    
-        </div>
-    </div>
-
-</div>
-
-<div style="display:none" id="copy_card">
-    <div class="row" style="padding-bottom: 5px;">
-        <div class="col-xs-3">
-            <img width="100%" class="img-circle" src="img/lf3.png">
-        </div>
-        <div class="col-xs-9" style="padding-left:0px;">
-            <div class="col-xs-12">
-            <b><p style="margin-bottom:0px;">John Smith</p></b>
-            </div>
-            <div class="col-xs-12">
-            <p style="margin:0px">Spanish River School</p>
-            <p style="text-align: right;margin:0px;"></p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <img src="http:////stylenanda.com/web/product/medium/201808/2987daa6233c617105bf4f89ab86632f.jpg" width="100%">
-    </div>
-    <div class="row">
-        <img src="img/feedb.png" width="100%">
-    </div>
-    <div class="row">
-        test    
-    </div>
-</div>
-
-<div style="display:none;" id="image_list">
-</div>
+        </section>
 
 
-
-
-<div class="row" style="margin-bottom:45px;">
-    <div class="col-sm-6">
-	   <p style="color:grey;"></p>
-    </div>
-</div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-1.11.3.min.js"></script>
-
+        <!-- <footer class="footer">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a href="#" class="footer__link">about us</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">support</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">blog</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">press</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">api</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">jobs</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">privacy</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">terms</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">directory</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">language</a></li>
+                </ul>
+            </nav>
+            <span class="footer__copyright">© 2017 instagram</span>
+        </footer> -->
+        <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+        <script src="js/app.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/slick.min.js"></script>
-<script src="js/opyeung.js"></script>
-</body>
+<script src="js/opyeung.js"></script>        
+    </body>
 </html>

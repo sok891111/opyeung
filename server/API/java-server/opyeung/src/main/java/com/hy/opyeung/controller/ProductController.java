@@ -23,7 +23,6 @@ public class ProductController {
 	public List<Product> list(@RequestParam(value = "uid") String uid) {
 		List<Product> productList = productService.getProductList();
 		
-		
 		return productList;
 	}
 	

@@ -16,5 +16,10 @@ public class UserService {
 		return userMapper.insertUser(user);
 		
 	}
+	
+	public int updateUserProductInfo(String userId, String productId , int liked){
+		return userMapper.updateUserProductInfo(userId , productId , liked);
+		
+	}
 
 }

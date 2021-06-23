@@ -18,5 +18,14 @@
 		   (#{userId} , #{userNm} , #{sessionId} , now() , now())
 	</insert>
 
+
+	<insert id="updateUserProductInfo"> 
+		   INSERT INTO OP_VOTE_INF
+		   (USER_ID, PRODUCT_ID, VOTE_RESULT , CREATE_TM)
+		   VALUES
+		   (#{userId} , #{productId} , #{liked} , now())
+		   ON DUPLICATE KEY UPDATE VOTE_RESULT= #{liked}
+	</insert>
+
 	
 </mapper>

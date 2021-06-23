@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hy.opyeung.dao.User;
@@ -20,12 +22,11 @@ public class UserController {
 	
 	@Autowired 
 	UserService userService;
-
-
+	
+	
 	@GetMapping("init")
 	public void createCookie(HttpServletResponse response , @CookieValue(value = "userId" , defaultValue = "") String uid) {
 		
-		System.out.println(uid);
 		if(!"".equals(uid)) return;
 
 	    // uuid로 userID set-up
@@ -36,13 +37,24 @@ public class UserController {
 		cookie.setPath("/");
 		
 	    response.addCookie(cookie);
-	    System.out.println("testsetset");
 	    //User 정보 setting
 	    User user = new User();
 	    user.setUserId(guid);
 	    user.setUserNm(null);
 	    user.setSessionId(null);
 	    userService.createUser(user);
+		
+	}
+	
+	
+	@PutMapping("productInfo")
+	public void userProductInfo(@RequestParam(value = "productId") String productId ,
+			@RequestParam(value = "liked") int liked ) {
+		String userId = "test";
+		userService.updateUserProductInfo(userId , productId, liked);   
+		
+		
+		
 		
 	}
 	

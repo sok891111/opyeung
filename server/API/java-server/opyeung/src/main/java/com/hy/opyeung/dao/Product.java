@@ -11,6 +11,7 @@ public class Product {
 	private String siteIcon;
 	private String category;
 	private String categoryDesc;
+	private int productId;
 	private int productCode;
 	private String url;
 	private String productName;
@@ -38,6 +39,11 @@ public class Product {
 	public String getCategoryDesc() {
 		return this.categoryDesc;
 	}
+	
+	public int getProductId() {
+		return this.productId;
+	}
+	
 	
 	public int getProductCode() {
 		return this.productCode;

@@ -15,8 +15,8 @@ public class ProductService {
 	ProductMapper productMapper;
 	
 	//TO DO : DI 사용...? 장점 정리 해보자 
-	public List<Product> getProductList(){
-		return productMapper.getProductList();
+	public List<Product> getProductList(String userId){
+		return productMapper.getProductList(userId);
 	}
 
 }

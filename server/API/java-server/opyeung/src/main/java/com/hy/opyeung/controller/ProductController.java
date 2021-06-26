@@ -2,10 +2,11 @@ package com.hy.opyeung.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hy.opyeung.dao.Product;
@@ -20,8 +21,9 @@ public class ProductController {
 
 
 	@GetMapping("/list")
-	public List<Product> list(@RequestParam(value = "uid") String uid) {
-		List<Product> productList = productService.getProductList();
+	public List<Product> list(HttpServletRequest request) {
+		String userId = (String)request.getAttribute("userId");
+		List<Product> productList = productService.getProductList(userId);
 		
 		return productList;
 	}

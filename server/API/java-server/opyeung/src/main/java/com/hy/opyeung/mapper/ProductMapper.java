@@ -8,5 +8,5 @@ import com.hy.opyeung.dao.Product;
 
 @Mapper
 public interface ProductMapper {
-	public List<Product> getProductList();
+	public List<Product> getProductList(String userId);
 }

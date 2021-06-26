@@ -3,6 +3,7 @@ package com.hy.opyeung.controller;
 import java.util.UUID;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hy.opyeung.dao.User;
+import com.hy.opyeung.service.CommonService;
 import com.hy.opyeung.service.UserService;
 
 @RestController
@@ -23,12 +25,12 @@ public class UserController {
 	@Autowired 
 	UserService userService;
 	
+	@Autowired 
+	CommonService CommonService;
 	
 	@GetMapping("init")
-	public void createCookie(HttpServletResponse response , @CookieValue(value = "userId" , defaultValue = "") String uid) {
+	public void createCookie(HttpServletResponse response ) {
 		
-		if(!"".equals(uid)) return;
-
 	    // uuid로 userID set-up
 		String guid = UUID.randomUUID().toString();
 		Cookie cookie = new Cookie("userId", guid);
@@ -48,14 +50,14 @@ public class UserController {
 	
 	
 	@PutMapping("productInfo")
-	public void userProductInfo(@RequestParam(value = "productId") String productId ,
+	public void userProductInfo(HttpServletRequest request,
+			@RequestParam(value = "siteId") String siteId ,
+			@RequestParam(value = "productCode") String productCode ,
 			@RequestParam(value = "liked") int liked ) {
-		String userId = "test";
-		userService.updateUserProductInfo(userId , productId, liked);   
-		
-		
-		
+		String userId = (String)request.getAttribute("userId");
+		userService.updateUserProductInfo(userId , siteId , productCode, liked);   
 		
 	}
 	
 }
+

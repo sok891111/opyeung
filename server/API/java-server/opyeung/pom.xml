@@ -10,12 +10,13 @@
 	</parent>
 	<groupId>com.hy</groupId>
 	<artifactId>opyeung</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>opyeung</name>
 	<description>opeyung project init</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+	<packaging>war</packaging>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

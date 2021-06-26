@@ -17,7 +17,7 @@ class OpyeungApplicationTests {
 
 	@Test
 	void test1() {
-		List<Product> productList = productService.getProductList();
+		List<Product> productList = productService.getProductList("test");
 		for (Product product : productList) { 
 			System.out.println("member = " + product.toString()); 
 		}

@@ -5,7 +5,7 @@ import '../molecules/Oppost.css';
 const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 100,
     slidesToShow: 1,
     slidesToScroll: 1
 };

@@ -1,0 +1,12 @@
+
+
+div.arrow {
+	width: 6vmin;
+	height: 6vmin;
+	box-sizing: border-box;
+	position: absolute;
+	transform: rotate(-45deg);
+	
+	
+	
+}

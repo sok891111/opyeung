@@ -16,12 +16,22 @@
 	</sql>
 	
 	<select id="getProductList" resultType="Product"> 
-		    SELECT A.INX AS SITE_ID, A.SITE_NM , A.SITE_ICON , B.CATEGORY , B.CATEGORY_DESC , C.PRODUCT_IMG, C.PRODUCT_CODE , C.URL , C.INX AS PRODUCT_ID, C.PRODUCT_NM , C.PRODUCT_DESC, C.PRICE , C.DISCOUNT_PRICE
+		SELECT A.INX AS SITE_ID, A.SITE_NM , A.SITE_ICON , B.CATEGORY , B.CATEGORY_DESC , C.PRODUCT_IMG, C.PRODUCT_CODE , C.URL , C.INX AS PRODUCT_ID, C.PRODUCT_NM , C.PRODUCT_DESC, C.PRICE , C.DISCOUNT_PRICE
               FROM OP_SITE_MAS A
               JOIN OP_CATEGORY_MAS B ON A.INX = B.SITE_ID
               JOIN OP_PRODUCT_MAS C ON B.CATEGORY = C.CATEGORY_ID
+              WHERE C.PRODUCT_CODE NOT IN ( SELECT PRODUCT_CODE FROM OP_VOTE_INF D WHERE A.INX = D.SITE_ID AND USER_ID = #{userId})
+              ORDER BY RAND()
               limit 10;
 	</select>
-
 	
+	
+	<select id="getProductImgList" resultType="Product"> 
+		SELECT URL as DETAIL_IMG , PRODUCT_CODE 
+	      FROM OP_IMAGE_MAS
+		 WHERE SITE_ID = #{siteId}
+		   AND PRODUCT_CODE = #{productCode}
+      ORDER BY INX
+	</select>
+
 </mapper>

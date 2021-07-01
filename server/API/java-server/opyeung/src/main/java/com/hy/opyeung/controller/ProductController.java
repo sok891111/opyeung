@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hy.opyeung.dao.Product;
@@ -26,6 +27,16 @@ public class ProductController {
 		List<Product> productList = productService.getProductList(userId);
 		
 		return productList;
+	}
+	
+	@GetMapping("/imgList")
+	public List<Product> imgList(
+			@RequestParam String siteId,
+			@RequestParam String productCode
+			) {
+		List<Product> imgList = productService.getProductImgList(siteId, productCode);
+		
+		return imgList;
 	}
 	
 }

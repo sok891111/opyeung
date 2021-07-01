@@ -25,11 +25,11 @@ public class HttpInterceptor implements HandlerInterceptor {
 			for (Cookie cookie : request.getCookies()) 
 			    if("userId".equals(cookie.getName())) userId = cookie.getValue();
 		}
-		
-		if(null == userId) 
-			throw new OpyeungException(HttpStatus.NOT_FOUND ,"Invalid Access");
+//		
+//		if(null == userId) 
+//			throw new OpyeungException(HttpStatus.NOT_FOUND ,"Invalid Access");
 
-		request.setAttribute("userId", userId);
+		request.setAttribute("userId", "test");
 		return true;
 		
 		

@@ -18,5 +18,10 @@ public class ProductService {
 	public List<Product> getProductList(String userId){
 		return productMapper.getProductList(userId);
 	}
+	
+	
+	public List<Product> getProductImgList(String siteId, String productCode){
+		return productMapper.getProductImgList(siteId, productCode);
+	}
 
 }

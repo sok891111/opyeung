@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -51,9 +51,9 @@ public class UserController {
 	
 	@PutMapping("productInfo")
 	public void userProductInfo(HttpServletRequest request,
-			@RequestParam(value = "siteId") String siteId ,
-			@RequestParam(value = "productCode") String productCode ,
-			@RequestParam(value = "liked") int liked ) {
+			@RequestBody String productCode ,
+			@RequestBody int siteId ,
+			@RequestBody int liked ) {
 		String userId = (String)request.getAttribute("userId");
 		userService.updateUserProductInfo(userId , siteId , productCode, liked);   
 		

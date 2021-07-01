@@ -17,7 +17,7 @@ public class UserService {
 		
 	}
 	
-	public int updateUserProductInfo(String userId, String siteId , String productId , int liked){
+	public int updateUserProductInfo(String userId, int siteId , String productId , int liked){
 		return userMapper.updateUserProductInfo(userId , siteId , productId , liked);
 		
 	}

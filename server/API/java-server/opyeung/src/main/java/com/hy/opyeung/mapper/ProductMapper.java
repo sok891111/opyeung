@@ -9,4 +9,5 @@ import com.hy.opyeung.dao.Product;
 @Mapper
 public interface ProductMapper {
 	public List<Product> getProductList(String userId);
+	public List<Product> getProductImgList(String siteId, String productCode);
 }

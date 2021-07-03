@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import '../molecules/Oppost.css'
+import '../atoms/Oppost.css'
 
 
 class Oppost extends Component {
@@ -19,13 +19,13 @@ class Oppost extends Component {
 
                     <div className="Post-user-profilepicture">
 
-                        <img src={post.Postuserface} alt={post.Postusername} />
+                        <img src={post.siteIcon} alt={post.siteNm} />
 
                     </div>
 
                     <div className="Post-user-nickname">
 
-                        <span>{post.Postusernickname}</span>
+                        <span>{post.siteNm}</span>
 
                     </div>
 
@@ -37,7 +37,7 @@ class Oppost extends Component {
 
                 <div className="Post-image-bg">
 
-                    <img alt="Icon Living" src={post.Postimgsrc} />
+                    <img alt="Icon Living" src={post.productImg} />
 
                 </div>
 
@@ -45,8 +45,8 @@ class Oppost extends Component {
 
             <div className="Post-caption">
 
-                <strong>{post.Postcaption} </strong>
-                <p>내 옷 같은 편안함</p>
+                <strong>{post.productNm} </strong>
+                <p>{post.productDesc}</p>
 
             </div>
         </article>;

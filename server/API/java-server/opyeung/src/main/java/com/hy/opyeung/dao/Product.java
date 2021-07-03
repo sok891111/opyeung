@@ -6,7 +6,7 @@ import lombok.Getter;
 //@Data
 //@Getter
 public class Product {
-	private int inx;
+	private int siteId;
 	private String siteNm;
 	private String siteIcon;
 	private String category;
@@ -14,14 +14,15 @@ public class Product {
 	private int productId;
 	private int productCode;
 	private String url;
-	private String productName;
+	private String productNm;
 	private String productDesc;
 	private int price;
 	private int discountPrice;
 	private String productImg;
+	private String detailImg;
 	
-	public int getInx() {
-		return this.inx;
+	public int getSiteId() {
+		return this.siteId;
 	}
 	
 	public String getSiteNm() {
@@ -54,8 +55,8 @@ public class Product {
 		return this.url;
 	}
 	
-	public String getProductName() {
-		return this.productName;
+	public String getProductNm() {
+		return this.productNm;
 	}
 	
 	public String getProductDesc() {
@@ -72,6 +73,10 @@ public class Product {
 	
 	public String getProductImg() {
 		return this.productImg;
+	}
+	
+	public String getDetailImg() {
+		return this.detailImg;
 	}
 	
 	

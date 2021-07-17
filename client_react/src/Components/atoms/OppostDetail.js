@@ -1,21 +1,108 @@
-import React from 'react'
-import { useRef,useCallback,useEffect } from 'react';
+import React, { Component } from "react";
+import { useRef, useCallback, useEffect } from 'react';
 import useScrollFadeIn from '../hooks/useScrollFadeIn';
+import Modal from '@material-ui/core/Modal';
+import Slide from '@material-ui/core/Slide';
 
-export default function OppostDetail() {
-    const animatedItem = useScrollFadeIn();
-    return (
-        <article className="Post">
-   <div className="Post-image">
-   
-       <div className="Post-image-bg">
-       <img  alt="Icon Living" src='https://cdn-naning9.bizhost.kr/files/goodsm/54511/1558503649_0.jpg'/>
-   
-          
-       </div>
-   
-   </div>
-   </article>
-    )
+
+import Hammer from "rc-hammerjs";
+export default class OppostDetail extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      swiped: false,
+      startX: 0,
+      startY: 0,
+      endX: 0,
+      endY: 0,
+      data: [],
+      isLoaded: false,
+      productCode: this.props.post.productCode
+    };
+  }
+
+
+  componentDidMount() {
+    
+    var siteId = this.props.post.siteId
+    var productCode = this.props.post.productCode
+    console.log('상품명' + productCode)
+    fetch('http://34.83.107.247:8888/product/imgList?siteId=' + siteId + '&productCode=' + productCode)
+      .then(res => res.json())
+      .then(result => {
+        console.log('호출')
+            this.setState({
+          isLoaded: true,
+          data: result
+        });
+      });;
+  };
+  componentWillReceiveProps(nextProps) {
+    // this will run every time the props change - and possibly in addition to this, so we need to check for prop changes
+    if (this.props.post !== nextProps.post) {
+      var siteId = nextProps.post.siteId
+      var productCode = nextProps.post.productCode
+      fetch('http://34.83.107.247:8888/product/imgList?siteId=' + siteId + '&productCode=' + productCode)
+        .then(res => res.json())
+        .then(result => {
+          console.log(result)
+          this.setState({
+            isLoaded: true,
+            data: result
+          });
+        });;
+    }
+  }
+
+  handleOpen = () => {
+    this.setState({ detailYN: false });
+  };
+
+
+  render() {
+    if (this.props.detailYN) {
+      const data = this.state.data
+      return (
+ 
+        <Modal
+          style={{
+            overflow: 'scroll', top: '78px',
+            left: '-15px',
+          }}
+          hideBackdrop={true}
+          open={(this.props.detailYN)}
+          onClose={(this.props.detailYN)}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+        >
+        <Slide direction="up" in={(this.props.detailYN)} > 
+          <Hammer onDoubleTap={this.props.onCloseModal} >
+            <article className="Post" >
+              <div className="Post-image">
+                <div className="Post-image-bg">
+
+                  {data.map((item, index) => {
+                    return (
+                      <img alt="Icon Living" src={item.detailImg} />
+
+                    )
+                  }
+                  )}
+                </div>
+              </div>
+            </article>
+
+          </Hammer>
+      </Slide>
+
+        </Modal>
+      )
+    }
+    else {
+      return (
+        <div></div>
+      )
+    }
+  }
 }
 

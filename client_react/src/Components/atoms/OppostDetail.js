@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { useRef, useCallback, useEffect } from 'react';
-import useScrollFadeIn from '../hooks/useScrollFadeIn';
 import Modal from '@material-ui/core/Modal';
 import Slide from '@material-ui/core/Slide';
 
@@ -23,7 +21,14 @@ export default class OppostDetail extends Component {
 
 
   componentDidMount() {
-    
+    if(this.props.detailYn){
+      document.body.style.overflowX = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.height = '100%';
+      document.body.style.width = '100%';
+      
+
+    }
     var siteId = this.props.post.siteId
     var productCode = this.props.post.productCode
     console.log('상품명' + productCode)
@@ -53,6 +58,9 @@ export default class OppostDetail extends Component {
         });;
     }
   }
+  componentWillUnmount() {
+    document.body.style.overflow = 'unset';
+}
 
   handleOpen = () => {
     this.setState({ detailYN: false });

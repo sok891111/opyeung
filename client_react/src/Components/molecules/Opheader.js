@@ -1,8 +1,6 @@
 
     import React from "react";
     import '../molecules/Opheader.css'
-    import Opsearchbar from "../atoms/Opsearchbar";
-    import Opbutton from "../atoms/Opbutton";
     import logo from './images/logo.png';
 
     class Opheader extends React.Component{

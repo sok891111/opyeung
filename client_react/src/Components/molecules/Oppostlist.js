@@ -3,8 +3,6 @@ import Oppost from '../atoms/Oppost'
 import Slider from "react-slick";
 import '../molecules/Oppostlist.css';
 
-import Hammer from "rc-hammerjs";
-
 class Oppostlist extends Component {
   constructor(props) {
     super(props);
@@ -14,9 +12,9 @@ class Oppostlist extends Component {
   }
 
 
-  onSwipe=()=>{
-    alert('스와이프') 
-    }
+  onSwipe = () => {
+    alert('스와이프')
+  }
   render() {
 
     function randomArrayShuffle(array) {
@@ -34,19 +32,19 @@ class Oppostlist extends Component {
       dots: false,
       infinite: true,
       lazyLoad: true,
-      speed: 0,
+      speed: 100,
       slidesToShow: 1,
       slidesToScroll: 0,
-      touchThreshold : 100,
-      beforeChange: (current, next) => this.setState({ Oppostlistdata: randomArrayShuffle(this.props.Oppostlistdata) ,index : next })
+      touchThreshold: 10,
+      beforeChange: (current, next) => this.setState({ Oppostlistdata: randomArrayShuffle(this.props.Oppostlistdata), index: next })
     };
 
     return (
-      
+
       <div className='SliderWrapper' >
-       
+
         <Slider ref={slider => (this.slider = slider)} {...settings}  >
-          
+
           {this.props.Oppostlistdata.map((item, index) => {
             return (
               <Oppost post={item} />

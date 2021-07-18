@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import '../atoms/Oppost.css'
-import ReactTouchEvents from "react-touch-events";
 import Hammer from "rc-hammerjs";
 import OppostDetail from "./OppostDetail";
 
@@ -17,7 +16,7 @@ class Oppost extends Component {
             detailYN : false
          };
         this._swipe = {};
-        this.minDistance = -3;
+        this.minDistance = -100;
         
         this._onTouchStart = this._onTouchStart.bind(this);
         this._onTouchMove = this._onTouchMove.bind(this);
@@ -43,7 +42,7 @@ class Oppost extends Component {
         const absY = touch.clientY - this.state.startY
         const absX = touch.clientX - this.state.startX
         console.log('End'+absY)
-        console.log(absY < this.minDistance)
+        console.log(absY < this.minDistance && absX < 3 )
         if ( absY < this.minDistance ) {
           this.setState({ swiped: true, detailYN:true });
         }

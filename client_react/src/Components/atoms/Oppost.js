@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import '../atoms/Oppost.css'
+import '../atoms/OppostDetail.css'
 import Hammer from "rc-hammerjs";
 import OppostDetail from "./OppostDetail";
 
@@ -62,7 +62,7 @@ class Oppost extends Component {
 
         return (
             <div>
-          <article className="Post" ref="Post"
+          <article className="Detail" ref="Post"
             onTouchStart={(e)=>this._onTouchStart(e)}
             onTouchMove={(e)=>this._onTouchMove(e)}
             onTouchEnd={(e)=>this._onTouchEnd(e)}  

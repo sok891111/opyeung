@@ -33,6 +33,7 @@ class Oppostlist extends Component {
       infinite: true,
       lazyLoad: true,
       speed: 100,
+      arrows: false,
       slidesToShow: 1,
       slidesToScroll: 0,
       touchThreshold: 10,

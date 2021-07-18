@@ -74,8 +74,8 @@ export default class OppostDetail extends Component {
  
         <Modal
           style={{
-            overflow: 'scroll', top: '78px',
-            left: '-15px',
+            overflow: 'scroll', top: '79px',
+           
           }}
           hideBackdrop={true}
           open={(this.props.detailYN)}
@@ -85,7 +85,7 @@ export default class OppostDetail extends Component {
         >
         <Slide direction="up" in={(this.props.detailYN)} > 
           <Hammer onDoubleTap={this.props.onCloseModal} >
-            <article className="Post" >
+            <article className="PostDetail">
               <div className="Post-image">
                 <div className="Post-image-bg">
 

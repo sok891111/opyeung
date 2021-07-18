@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import '../atoms/OppostDetail.css'
 import Hammer from "rc-hammerjs";
 import OppostDetail from "./OppostDetail";
-import heart from './heart'
 import FavoriteIcon from '@material-ui/icons/Favorite';
 class Oppost extends Component {
     constructor(props){

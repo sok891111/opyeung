@@ -14,7 +14,6 @@ export default class Home extends Component {
     fetch('http://34.83.107.247:8888/product/list')
       .then(res => res.json())
       .then(result => {
-        console.log(result)
         this.setState({
           isLoaded: true,
           Data: result

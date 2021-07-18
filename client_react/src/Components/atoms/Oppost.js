@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import '../atoms/OppostDetail.css'
 import Hammer from "rc-hammerjs";
 import OppostDetail from "./OppostDetail";
-
+import heart from './heart'
+import FavoriteIcon from '@material-ui/icons/Favorite';
 class Oppost extends Component {
     constructor(props){
         super(props);
@@ -24,7 +25,6 @@ class Oppost extends Component {
     }
 
     _onTouchStart(e) {
-        console.log('start')
         const touch = e.touches[0];
         this._swipe = { x: touch.clientX, y: touch.clientY };
         this.setState({ swiped: false , startX : this._swipe.x, startY : this._swipe.y});
@@ -41,10 +41,11 @@ class Oppost extends Component {
         const touch = e.changedTouches[0];
         const absY = touch.clientY - this.state.startY
         const absX = touch.clientX - this.state.startX
-        console.log('End'+absY)
-        console.log(absY < this.minDistance && absX < 3 )
         if ( absY < this.minDistance ) {
           this.setState({ swiped: true, detailYN:true });
+        }
+        else if( absY==0&&absX==0){
+
         }
       }
     onDoubleTap=(url)=>{
@@ -52,7 +53,6 @@ class Oppost extends Component {
     }
     onCloseModal =() => {
       this.setState({ detailYN:false });
-      console.log(this.state.detailYN)
     }
        
     
@@ -62,6 +62,8 @@ class Oppost extends Component {
 
         return (
             <div>
+              
+             <FavoriteIcon/>
           <article className="Detail" ref="Post"
             onTouchStart={(e)=>this._onTouchStart(e)}
             onTouchMove={(e)=>this._onTouchMove(e)}
@@ -79,7 +81,12 @@ class Oppost extends Component {
                 </div>
             </header>
 
-            <Hammer onDoubleTap={()=>this.onDoubleTap(post.url)} >
+            <Hammer 
+              onDoubleTap={()=>this.onDoubleTap(post.url)} 
+              onPress ={()=>{alert('ss')}}
+            
+            
+            >
        
             <div className="Post-image">
                 <div className="Post-image-bg">

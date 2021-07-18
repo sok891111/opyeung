@@ -78,12 +78,15 @@ export default class OppostDetail extends Component {
            
           }}
           hideBackdrop={true}
+          
           open={(this.props.detailYN)}
           onClose={(this.props.detailYN)}
-          aria-labelledby="simple-modal-title"
-          aria-describedby="simple-modal-description"
         >
-        <Slide direction="up" in={(this.props.detailYN)} > 
+        <Slide direction="up" 
+                in={(this.props.detailYN)}
+                style={{ transformOrigin: '0 0 0' }}
+          {...(this.props.detailYN ? { timeout: 500 } : {})}
+           > 
           <Hammer onDoubleTap={this.props.onCloseModal} >
             <article className="PostDetail">
               <div className="Post-image">

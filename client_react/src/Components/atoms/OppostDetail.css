@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.PostDetail {
+.PostDetailOpen {
 
 
   border: 1px solid #e6e6e6;
@@ -48,4 +48,21 @@
 
   margin-right: 0%;
 
+}
+
+
+.PostDetailClose {
+  position: relative;
+  -webkit-animation-name: PostDetailClose;
+  -webkit-animation-duration: 2s;
+  animation-name: PostDetailClose;
+  animation-duration: 2s
+}
+@-webkit-keyframes PostDetailClose {
+  from { bottom:0px; opacity:1 } 
+  to { bottom:-100px; opacity:0 }
+}
+@keyframes PostDetailClose { 
+  from { bottom:0px; opacity:1 } 
+  to { bottom:-100px; opacity:0 }
 }

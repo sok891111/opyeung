@@ -15,20 +15,19 @@ export default class OppostDetail extends Component {
       endY: 0,
       data: [],
       isLoaded: false,
-      productCode: this.props.post.productCode
+      productCode: this.props.post.productCode,
+      detailYN : true,
     };
   }
 
 
   componentDidMount() {
-    if(this.props.detailYn){
       document.body.style.overflowX = 'hidden';
       document.body.style.position = 'fixed';
       document.body.style.height = '100%';
       document.body.style.width = '100%';
       
 
-    }
     var siteId = this.props.post.siteId
     var productCode = this.props.post.productCode
     console.log('상품명' + productCode)
@@ -62,13 +61,8 @@ export default class OppostDetail extends Component {
     document.body.style.overflow = 'unset';
 }
 
-  handleOpen = () => {
-    this.setState({ detailYN: false });
-  };
-
 
   render() {
-    if (this.props.detailYN) {
       const data = this.state.data
       return (
  
@@ -78,13 +72,12 @@ export default class OppostDetail extends Component {
            
           }}
           hideBackdrop={true}
-          
           open={(this.props.detailYN)}
-          onClose={(this.props.detailYN)}
+          onClose={this.props.onCloseModal}
         >
         <Slide direction="up" 
                 in={(this.props.detailYN)}
-                style={{ transformOrigin: '0 0 0' }}
+                
           {...(this.props.detailYN ? { timeout: 500 } : {})}
            > 
           <Hammer onDoubleTap={this.props.onCloseModal} >
@@ -108,12 +101,6 @@ export default class OppostDetail extends Component {
 
         </Modal>
       )
-    }
-    else {
-      return (
-        <div></div>
-      )
-    }
   }
 }
 

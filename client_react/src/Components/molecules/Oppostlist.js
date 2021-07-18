@@ -46,7 +46,7 @@ class Oppostlist extends Component {
 
         <Slider ref={slider => (this.slider = slider)} {...settings}  >
 
-          {this.props.Oppostlistdata.map((item, index) => {
+          {this.props.Oppostlistdata.map((item) => {
             return (
               <Oppost post={item} />
 

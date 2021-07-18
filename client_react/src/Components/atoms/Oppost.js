@@ -13,7 +13,8 @@ class Oppost extends Component {
             startY : 0,
             endX:0,
             endY : 0,
-            detailYN : false
+            detailYN : false,
+            likeYN : false
          };
         this._swipe = {};
         this.minDistance = -100;
@@ -43,9 +44,6 @@ class Oppost extends Component {
         if ( absY < this.minDistance ) {
           this.setState({ swiped: true, detailYN:true });
         }
-        else if( absY==0&&absX==0){
-
-        }
       }
     onDoubleTap=(url)=>{
         window.location.href=url
@@ -58,11 +56,15 @@ class Oppost extends Component {
     render() {
         const post = this.props.post
 
-
+        var likeYN = this.state.likeYN
         return (
             <div>
+
               
-             <FavoriteIcon/>
+              <div className='floatingheart'>
+                {likeYN==false ? <FavoriteIcon color="disabled"/> : <FavoriteIcon color="secondary"/>}
+             </div>
+        
           <article className="Detail" ref="Post"
             onTouchStart={(e)=>this._onTouchStart(e)}
             onTouchMove={(e)=>this._onTouchMove(e)}
@@ -82,7 +84,7 @@ class Oppost extends Component {
 
             <Hammer 
               onDoubleTap={()=>this.onDoubleTap(post.url)} 
-              onPress ={()=>{alert('ss')}}
+              onPress ={()=>{ this.setState({likeYN: !this.state.likeYN})}}
             
             
             >

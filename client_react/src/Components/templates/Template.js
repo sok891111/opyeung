@@ -32,7 +32,7 @@ class Template extends Component {
     return (
       <div>
         <Opheader config = {_config_header}  />
-         <div >
+         <div style={{marginTop:'82px'}}>
           <Oppostlist Oppostlistdata={this.props.Data}/>
         </div>
       </div>

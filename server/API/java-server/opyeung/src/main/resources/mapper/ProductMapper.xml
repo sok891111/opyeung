@@ -24,6 +24,7 @@
               AND C.PRODUCT_TAG_MOST != ''
               ORDER BY RAND()
               limit 10;
+              
 	</select>
 	
 	

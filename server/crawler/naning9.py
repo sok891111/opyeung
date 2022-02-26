@@ -4,7 +4,7 @@
 import sys,MySQLdb
 from pyquery import PyQuery as pq
 from progressbar import ProgressBar
-sys.path.append('/home/sungjin/opyeung/bootstrap')
+sys.path.append('/home/sok891111/opyeung/server/crawler/bootstrap')
 import init, re
 
 site = init.init('naning9')
@@ -14,10 +14,11 @@ tnx = site.tnx
 
 cur = tnx.cursor()
 
+
 #p01.category insert
 #p01-1 이전 category 정보 삭제
 
-cur.execute("DELETE FROM OP_CATEGORY_MAS WHERE SITE_ID = %s",(site.site_id))
+cur.execute("DELETE FROM OP_CATEGORY_MAS WHERE SITE_ID = %s",(site.site_id,))
 tnx.commit();
 
 # #p01-1 상위 category 정보 insert
@@ -31,6 +32,7 @@ for category in cateogyr_list:
 		continue
 	category_desc = pq(category.find('a')).text()
 	category_code = url.split('=')[1]
+
 	cur.execute("""INSERT INTO OP_CATEGORY_MAS (SITE_ID , CATEGORY , CATEGORY_DESC , URL , CREATE_TM , UPDATE_TM )
 					VALUES (%s , %s , %s, %s , now() , now() ) """,(site.site_id , category_code, category_desc, url ))
 
@@ -38,7 +40,7 @@ tnx.commit();
 
 
 # #p01-2 하위 category 정보 insert
-cur.execute("SELECT CATEGORY FROM OP_CATEGORY_MAS WHERE SITE_ID = %s AND UPPER_CATEGORY IS NULL ",(site.site_id))
+cur.execute("SELECT CATEGORY FROM OP_CATEGORY_MAS WHERE SITE_ID = %s AND UPPER_CATEGORY IS NULL ",(site.site_id,))
 for row in cur.fetchall():
 	upper_category = row[0]
 	html = JQ.get('https://www.naning9.com/shop/list.php?cate=%s'%upper_category)
@@ -58,14 +60,13 @@ tnx.commit();
 
 #P02-01 Product 정보 delete
 cur.execute("""DELETE FROM OP_PRODUCT_MAS WHERE CATEGORY_ID IN 
-			(SELECT CATEGORY FROM OP_CATEGORY_MAS B WHERE CATEGORY_ID = B.CATEGORY AND B.SITE_ID = %s)""",(site.site_id))
-cur.execute("""DELETE FROM OP_IMAGE_MAS WHERE PRODUCT_CODE IN 
-			(SELECT C.PRODUCT_CODE FROM OP_CATEGORY_MAS B , OP_PRODUCT_MAS C WHERE B.CATEGORY = C.CATEGORY_ID AND C.PRODUCT_CODE = PRODUCT_CODE AND B.SITE_ID = %s)""",(site.site_id))
+			(SELECT CATEGORY FROM OP_CATEGORY_MAS B WHERE CATEGORY_ID = B.CATEGORY AND B.SITE_ID = %s)""",(site.site_id,))
+cur.execute("""DELETE FROM OP_IMAGE_MAS WHERE SITE_ID = %s""",(site.site_id,))
 tnx.commit();
 
 #p02-02 Product 정보 Insert
 print('Starting %s product list...' %site.site_nm)
-cur.execute("SELECT CATEGORY FROM OP_CATEGORY_MAS WHERE SITE_ID = %s AND UPPER_CATEGORY IS NOT NULL ",(site.site_id))
+cur.execute("SELECT CATEGORY FROM OP_CATEGORY_MAS WHERE SITE_ID = %s AND UPPER_CATEGORY IS NOT NULL ",(site.site_id,))
 for row in pbar(cur.fetchall()):
 	category = row[0]
 	page_cnt = 1
@@ -79,8 +80,8 @@ for row in pbar(cur.fetchall()):
 			if product_code is None :
 				continue
 			url = 'https://www.naning9.com/shop/view.php?index_no=%s'%product_code
-			cur.execute("""INSERT INTO OP_PRODUCT_MAS (PRODUCT_CODE , CATEGORY_ID ,URL , CREATE_TM , UPDATE_TM )
-						VALUES ('%s' , '%s' , '%s' , now() , now() ) """%( product_code, category, url ))		
+			cur.execute("""INSERT INTO OP_PRODUCT_MAS (PRODUCT_CODE , CATEGORY_ID ,URL , CREATE_TM , UPDATE_TM , SITE_ID )
+						VALUES ('%s' , '%s' , '%s' , now() , now() ,%s) """%( product_code, category, url ,site.site_id))		
 			#P02-02 Product 상세 정보 Insert
 			html = JQ.get(url)
 			product_nm = html('.tit-prd').text()
@@ -103,8 +104,8 @@ for row in pbar(cur.fetchall()):
 				if img_src is None : 
 					continue
 				try:
-					cur.execute("""INSERT INTO OP_IMAGE_MAS (URL , PRODUCT_CODE , CREATE_TM , UPDATE_TM )
-							VALUES (%s , %s , now() , now() ) """,( img_src, product_code ))		
+					cur.execute("""INSERT INTO OP_IMAGE_MAS (URL , PRODUCT_CODE , CREATE_TM , UPDATE_TM , SITE_ID )
+							VALUES (%s , %s , now() , now() ,%s) """,( img_src, product_code , site.site_id))			
 				except (MySQLdb.Error, MySQLdb.Warning) as e:
 					continue #Image Insert 중 Error 발생시 그냥 진행
 		tnx.commit();

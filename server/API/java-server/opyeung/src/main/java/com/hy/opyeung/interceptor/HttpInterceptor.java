@@ -19,6 +19,11 @@ public class HttpInterceptor implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request,
 		HttpServletResponse response, Object handler) throws Exception {
+		
+		//Only IOS acceptable
+		if( request.getHeader("user-agent").indexOf("iPhone") == -1 )
+			return false;
+		
 		String userId = null;
 		
 		if( null != request.getCookies()) {

@@ -157,7 +157,7 @@
 }*/
 
 .fa-heart{
-    animation:bump .6s infinite linear;
+    /*animation:bump .6s infinite linear;*/
 }
 
 @keyframes bump{

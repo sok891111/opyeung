@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.hy</groupId>
 	<artifactId>opyeung</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.6-SNAPSHOT</version>
 	<name>opyeung</name>
 	<description>opeyung project init</description>
 	<properties>

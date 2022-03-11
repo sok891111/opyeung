@@ -7,23 +7,22 @@
 	<sql id="userColumns">
 		INX, 
 		USER_ID , 
-		USER_NM , 
-		SESSION_ID 
+		USER_NM  
 	</sql>
 	
 	<insert id="insertUser" parameterType="User"> 
 		   INSERT INTO OP_USER_MAS
-		   (USER_ID, USER_NM, SESSION_ID , CREATE_TM, UPDATE_TM)
+		   (USER_ID, USER_NM , CREATE_TM, UPDATE_TM)
 		   VALUES
-		   (#{userId} , #{userNm} , #{sessionId} , now() , now())
+		   (#{userId} , #{userNm} , now() , now())
 	</insert>
 
 
 	<insert id="updateUserProductInfo"> 
 		   INSERT INTO OP_VOTE_INF
-		   (USER_ID, SITE_ID , PRODUCT_CODE, VOTE_RESULT , CREATE_TM)
+		   (USER_ID, PRODUCT_ID, VOTE_RESULT , CREATE_TM)
 		   VALUES
-		   (#{userId} ,#{siteId}, #{productCode} , #{liked} , now())
+		   (#{userId} , #{productId} , #{liked} , now())
 		   ON DUPLICATE KEY UPDATE VOTE_RESULT= #{liked}
 	</insert>
 

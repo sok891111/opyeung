@@ -1,3 +1,4 @@
+
 package com.hy.opyeung.controller;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hy.opyeung.dao.Comment;
 import com.hy.opyeung.dao.Product;
 import com.hy.opyeung.service.ProductService;
 
@@ -22,9 +24,10 @@ public class ProductController {
 
 
 	@GetMapping("/list")
-	public List<Product> list(HttpServletRequest request) {
+	public List<Product> list(HttpServletRequest request,
+			@RequestParam(defaultValue="0") int productCnt) {
 		String userId = (String)request.getAttribute("userId");
-		List<Product> productList = productService.getProductList(userId);
+		List<Product> productList = productService.getProductList(userId , productCnt);
 		
 		return productList;
 	}
@@ -38,5 +41,15 @@ public class ProductController {
 		
 		return imgList;
 	}
+	
+	@GetMapping("/commentList")
+	public List<Comment> commentList(
+			@RequestParam String productId
+			) {
+		List<Comment> commentList = productService.getProductCommentList(productId);
+		
+		return commentList;
+	}
+	
 	
 }

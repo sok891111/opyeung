@@ -20,11 +20,19 @@
               FROM OP_SITE_MAS A
               JOIN OP_CATEGORY_MAS B ON A.SITE_ID = B.SITE_ID
               JOIN OP_PRODUCT_MAS C ON A.SITE_ID = C.SITE_ID AND B.CATEGORY = C.CATEGORY_ID
-              WHERE C.PRODUCT_CODE NOT IN ( SELECT PRODUCT_CODE FROM OP_VOTE_INF D WHERE A.SITE_ID = D.SITE_ID AND USER_ID = #{userId} )
+              WHERE NOT EXISTS ( SELECT PRODUCT_ID FROM OP_VOTE_INF D WHERE C.PRODUCT_ID = D.PRODUCT_ID AND D.USER_ID = #{userId} )
               AND C.PRODUCT_TAG_MOST != ''
               ORDER BY RAND()
-              limit 10;
-              
+			<choose>
+				<when test = "productCnt > 0">
+						limit #{productCnt};
+				</when>
+				<otherwise>
+				        limit 10;
+				</otherwise>
+			</choose>
+
+            
 	</select>
 	
 	
@@ -34,6 +42,15 @@
 		 WHERE SITE_ID = #{siteId}
 		   AND PRODUCT_CODE = #{productCode}
       ORDER BY INX
+	</select>
+	
+	
+	<select id="getProductCommetList" resultType="Comment"> 
+		SELECT COMMENT_ID , PRODUCT_ID , USER_ID, COMMENT , CREATE_TM  
+	      FROM OP_COMMENT_MAS
+		 WHERE  PRODUCT_ID = #{productId}
+		     AND DEL_YN != 'Y' 
+      ORDER BY CREATE_TM DESC
 	</select>
 
 </mapper>

@@ -1,20 +1,14 @@
 package com.hy.opyeung.controller;
 
-import java.util.UUID;
-
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hy.opyeung.dao.User;
 import com.hy.opyeung.service.CommonService;
 import com.hy.opyeung.service.UserService;
 
@@ -29,35 +23,33 @@ public class UserController {
 	CommonService CommonService;
 	
 	@GetMapping("init")
-	public void createCookie(HttpServletResponse response ) {
+	public boolean createCookie(HttpServletRequest request , 
+									HttpServletResponse response ) {
 		
-	    // uuid로 userID set-up
-		String guid = UUID.randomUUID().toString();
-		Cookie cookie = new Cookie("userId", guid);
-		cookie.setMaxAge(365 * 24 * 60 * 60); 
-		cookie.setHttpOnly(true);
-		cookie.setPath("/");
+		boolean existUser = userService.checkUserInfo(request.getCookies());
 		
-	    response.addCookie(cookie);
-	    //User 정보 setting
-	    User user = new User();
-	    user.setUserId(guid);
-	    user.setUserNm(null);
-	    user.setSessionId(null);
-	    userService.createUser(user);
+		if(false == existUser) {
+			String userId = userService.setUserInfo(response);
+			userService.createUser(userId , "");
+		}
+
 		
+		return existUser;
 	}
 	
 	
-	@PutMapping("productInfo")
+//	@PostMapping(path="productInfo" ,  produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+	@GetMapping("productInfo")
 	public void userProductInfo(HttpServletRequest request,
-			@RequestBody String productCode ,
-			@RequestBody int siteId ,
-			@RequestBody int liked ) {
-		String userId = (String)request.getAttribute("userId");
-		userService.updateUserProductInfo(userId , siteId , productCode, liked);   
+			@RequestParam int productId ,
+			@RequestParam int liked ) {
+		userService.updateUserProductInfo(
+											request.getAttribute("userId").toString() ,
+											productId, 
+											liked);   
 		
 	}
+	
 	
 }
 

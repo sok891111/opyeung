@@ -28,9 +28,10 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
 //        		.allowedOrigins("*")
 //        		.allowCredentials(true)
-//        		.allowedOrigins("http://34.83.107.247")
-        		.allowedOrigins("*")
+        		.allowedOrigins("http://localhost:8080")
+        		.allowedOrigins("http://opyeung.com")
         		.allowedMethods("GET", "POST" , "PUT");
+        
         
     }
 }
